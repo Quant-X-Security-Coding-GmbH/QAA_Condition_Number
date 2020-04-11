@@ -302,12 +302,12 @@ position=bottom,
   \gdef\emails{#7}
   \vspace{3mm}
   \begin{center}
-    \begin{minipage}[b]{100mm}
+    \begin{minipage}[b]{120mm}
       {\Large\bfseries \title}  \\[1em]
       {\bfseries \authorwithaddress}  \\[1em]
       \@for\email:=\emails\do{\href{mailto:\email}{\texttt{\email}}\\}
     \end{minipage}%
-    \begin{minipage}[b]{75mm}
+    \begin{minipage}[b]{55mm}
       \flushright
       \@for\image:=\images\do{ \includegraphics[height=45mm]{\image}}
     \end{minipage}

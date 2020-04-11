@@ -26,8 +26,10 @@ The condition number of the Macualay Matrix}
 % Label of authors' names
 {NameAuthor}
 % Names and adresses
-{Dr. Peter Nonnenmann, Quant-X Security {\&} Coding\\
-Xenia Bogomolec, Quant-X Security {\&} Coding\\}
+{Dr. Peter Nonnenmann,
+{\small \textit{DHBW Mannheim and Quant-X Security {\&} Coding}} \\
+Dipl. Math. Xenia Bogomolec, 
+{\small \textit{CEO Quant-X Security {\&} Coding}} \\}
 % Images of authors
 {./PQS_logo_pure_with.png}
 % E-Mails
@@ -55,13 +57,13 @@ Xenia Bogomolec, Quant-X Security {\&} Coding\\}
 \textit{We investigate the condition number of the Macaulay matrix in the Quantum Algebraic Attack \cite{QAA} on the symmetric cryptographic algorithm \textsc{AES} (Advanced Encryption Standard \cite{AES}). \textsc{AES} is the standardized version of \textsc{Rijndael} and globally used for hybrid encryption in protocols such as TLS, OpenPGP, SSH, IPSec, etc. as well as for purely symmetric applications such as hard disk encryption.} \\
 
 \noindent
-\textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} equals infinity, independent from the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} is not practical.}
+\textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} equals infinity, independent from the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} is not practical.} \\
 
 
 \section{Introduction}
 
 \noindent
-It is known for decades that currently used asymmetric cryptography relying on the hardness of integer factorization and discrete logarithm systems will no longer be valid with the advent of potent enough quantum computers. Quantum cryptanalyses on symmetric cryptography have been published far more recent, amongst them \\
+It is known for decades that currently used asymmetric cryptography relying on the hardness of integer factorization and discrete logarithm systems will no longer be valid with the advent of potent enough quantum computers. Quantum cryptanalyses on symmetric cryptography have been published far more recently, amongst them \\
 
 \begin{itemize} [noitemsep, nolistsep]
   \item[1)] Quantum Algorithms for Boolean Equation Solving and Quantum Algebraic Attack on Cryptosystems \\
@@ -98,12 +100,13 @@ The resulting quantum algebraic attack algorithm includes quantum-monomial solvi
 \vspace{0.5cm}
 
 \noindent
-The matrix $M_{MCA}$, which represents the Macaulay linear system of the attacked crypto system, defines the desired condition number $\kappa$. In order to derive $M_{QAA}$ and then compute $\kappa$ of \textsc{AES}, we take a look at the structure of \textsc{QAA}.
+The matrix $M_{mca}$, which represents the Macaulay linear system of the attacked crypto system, defines the desired condition number $\kappa$. In order to derive $M_{mca}(AES)$ and then compute $\kappa$ of \textsc{AES}, we take a look at the structure of \textsc{AES}.
 
 
 \subsection{Mathematical structure of \textsc{AES}}
 \noindent
 All \textsc{Rijndael} functions are linear. Only the basic encryption function \textit{SubBytes} (see section Basic \textsc{Rijndael} encryption functions) is often referred as the non-linear part of \textsc{AES}, but in fact it is linear as well. Well chosen linear layers with very strong diffusion properties protect against conventional attacks using statistical properties of a cryptosystem. In the case of the quantum algebraic attack, this effect is limited. \\
+
 
 The $4$ basic functions of the \textsc{Rijndael} encryption are: \\
 
@@ -121,10 +124,10 @@ The $4$ basic functions of the \textsc{Rijndael} encryption are: \\
   \vspace{0.1cm}
 
   \item[4)] \textit{MixColumns} - mixing for diffusion: \\
-  Multiplication of each column of the state with the following matrix $M_{AES}$:
+  Multiplication of each column of the state with the following matrix $M_{mix}$:
 
   $$ 
-  	M_{AES} = 
+  	M_{mix} = 
   	\begin{bmatrix}
   		2 & 3 & 1 & 1 \\ 
   	 	1 & 2 & 3 & 1 \\
@@ -136,9 +139,14 @@ The $4$ basic functions of the \textsc{Rijndael} encryption are: \\
 \end{itemize} 
 
 \vspace{0.3cm}
+\noindent
+The matrix $M$($S$-Box) representing the $S$-Box will be the base of our computation. By showing that the condition number of its Macaulay matrix $M_{mca}$($S$-Box) equals $\infty$, the condition number of $M_{mca}(AES)$ equals $\infty$ as a result of matrix multiplication.\\
+
 
 \subsection{Analysis}
-\noindent By P. Nonnenmann with the friendly support of S. Rump\\
+\noindent 
+{\small \textit{Result by P. Nonnenmann with the friendly support of Siegfried Rump (Head for Reliable Computing, TU Harburg). \\
+Algebraic Geometric context explanation by Xenia Bogomolec.}}\\
 
 \noindent
 In the analysis of the Chen-Gao quantum algorithm on \textsc{AES}, we make the same definitions as Chen-Gao, and use the same numeration of definitions, remarks, Theorems  etc. Let $\mathbb{C}$ b the field of complex numbers and $\mathbb{C}[X]$ the polynomial ring in the indeterminates $X = x_1, \ldots, x_n, \, n \in \mathbb{N}$ over $\mathbb{C}$. \\
@@ -147,17 +155,20 @@ In the analysis of the Chen-Gao quantum algorithm on \textsc{AES}, we make the s
 For a polynomial $f \in \mathbb{C}[X]$, we denote \\
 
 \noindent
-$deg(f) =$ the total degree of $f$, i. e. the maximal sum of powers of the variables per single monomial,\\
+$deg(f) :=$ the total degree of $f$, i. e. the maximal sum of powers of the variables per single monomial,\\
 \noindent
-$s(f) =$ the sparseness of $f$, i. e. the number of terms in $f$, \\
+$s(f) :=$ the sparseness of $f$, i. e. the number of terms in $f$, \\
 \noindent
-$\Lambda \, m(f) =$ the set of monomials of $f$. \\
+$\Lambda \, m(f) :=$ the set of monomials of $f$. \\
 
 \noindent
-For $S \subseteq \mathbb{C}[X]$, we denote $V_{\mathbb{C}}(S) \subseteq \mathbb{C}^n$ the variety of the polynomials in $S$. \\
+For $S \subseteq \mathbb{C}[X]$, we denote $V_{\mathbb{C}}(S) \subseteq \mathbb{C}^n$ the variety of the polynomials of $S$ in $\mathbb{C}^n$, i. e. 
+
+$$V_{\mathbb{C}}(S) = \{ X \in \mathbb{C}^n | f(X) = 0 \, \forall f \in S\}.$$
+\vspace{0.1cm}
 
 \noindent
-Let $F = \langle f_1, \ldots, f_r \rangle \subseteq \mathbb{C}[X]\, , r \in \mathbb{N}$, $d_i = deg(f_i)$, $t_i = s(f_i), \, i \in \{1, \ldots, r\}$.\\
+Now, as long as we consider the zero set of $S \subseteq \mathbb{C}^n$ on the geometric side, we can work with the ideal generated by $S$ on the algebraic side. Even better, we are allowed to use any basis of the ideal generated by $S$ to consider our problem, and therefore choose the most suitable one. So let $F = \langle f_1, \ldots, f_r \rangle \subseteq \mathbb{C}[X]\, , r \in \mathbb{N}$, $d_i = deg(f_i)$, $t_i = s(f_i), \, i \in \{1, \ldots, r\}$ be such an ideal.\\
 
 \noindent
 \textbf{Definition 3.2.1}\\
@@ -187,7 +198,7 @@ $$dim(M_{F,D})= ( r (d+1)^n ) \times ((\overline{D} + 1 )^n -1)
 = (r \cdot 2^{n \delta})(2^{n \Delta} -1 ),$$
 
 \noindent
-with the given parameters above.\\
+with the given parameters above. $M_{F,D}$ represents $M_{mca}$($S$-Box) from section 3.1. We switch from a labeling with cryptographic parameters to a labeling with algebraic parameters for a better understanding of the immediate context.\\
 
 \noindent
 \textbf{Remark 3.2.3} \\
@@ -229,11 +240,11 @@ $k(M ) = \frac{s_{max}}{s_{min}} = \infty$. \\
 
 \noindent
 \textbf{Theorem 3.2.8} \\
-The condition number of the whole polynomial system $F$ is infinite. \\
+$\kappa(M_{mca}(S$-Box$))=\infty$, the condition number of the whole polynomial system $F$ is infinite. \\
 
 \noindent
 \textbf{Proof of Theorem 3.2.8} \\
-In the paper \cite{QAA}, algorithm 4.2 has the following properties: The runtime complexity of the algorithm is  $\mathcal{O}(n^{2.5}(n + T_F)\kappa^2 \log(\frac{1}{\epsilon})$, where $\kappa$ is the maximal condition number for all matrices $M_{F^2,D}$ in Step $4$, called the CONDITION NUMBER $\kappa(F) = \kappa)$ for the polynomial system $F$. By their Lemma 4.5, there are at most $n$ iterations in the loop, where the matrices $M_{F^2,D}$ are used. Since all their condition numbers are infinite, the condition number of the polynomial system is infinite as well, and so is the runtime complexity of the Chen-Gao-Algorithm (Theorem 4.3). \\
+In the paper \cite{QAA}, algorithm 4.2 has the following properties: The runtime complexity of the algorithm is  $\mathcal{O}(n^{2.5}(n + T_F)\kappa^2 \log(\frac{1}{\epsilon})$, where $\kappa$ is the maximal condition number for all matrices $M_{\mathcal{F}_2,D}$ in Step $4$, called the CONDITION NUMBER $\kappa(F) = \kappa)$ for the polynomial system $F$. By their Lemma 4.5, there are at most $n$ iterations in the loop, where the matrices $M_{\mathcal{F}_2,D}$ are used. Since all their condition numbers are infinite, the condition number of the polynomial system is infinite as well, and so is the runtime complexity of the Chen-Gao-Algorithm (Theorem 4.3). \\
 
 
 \section{Conclusion}
