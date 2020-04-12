@@ -5,10 +5,8 @@ On the condition number of the Qantum Algebraic attack by Chen-Gao for chosen cr
 ## Objective
 
 This repository documents the work in progress on the investigation of the condition number of the scientific paper
-
 **Quantum Algorithms for Boolean Equation Solving and Quantum Algebraic Attack on Cryptosystems**
-
-by Y.~-A.~Chen, X.~-S.~Gao, https://arxiv.org/abs/1712.06239}, 2018.
+by Y.-A.Chen, X.-S.Gao, https://arxiv.org/abs/1712.06239}, 2018.
 
 
 ## History
