@@ -18,7 +18,7 @@ by Y.-A.Chen, X.-S.Gao, https://arxiv.org/abs/1712.06239}, 2018.
 ## Cross References
 
 * eAES code by John Gregory Underhill: ([CEX Crypto Library](https://github.com/Steppenwolfe65/CEX))
-* eAES mathematical analysisfor Grover's Search by Xenia Bogomolec: ([eAES_post-quantum_math_analysis](https://github.com/XeniaGabriela/eAES_post-quantum_math_analysis))
+* eAES mathematical analysis wrt. Grover's Search by Xenia Bogomolec: ([eAES_post-quantum_math_analysis](https://github.com/XeniaGabriela/eAES_post-quantum_math_analysis))
 
 Scientific references used for the computation of the condition number see the refrences in the ([Official Paper](
 https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/official_paper/QAA_on_AES_paper.pdf)) on the Complexity of the Quantum Algebraic Attack on AES.
