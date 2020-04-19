@@ -26,3 +26,5 @@ https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/official_paper/QAA
 ## Contributers
 * [Dr. Peter Nonnenmann](https://www.linkedin.com/in/peter-dr-nonnenmann-737857a0/): Core Analysis, see [his original paper](https://github.com/XeniaGabriela/QAA_Condition_Nr/tree/master/results_nonnenmann_rump)
 * [Xenia Bogomolec](https://www.linkedin.com/in/xenia-bogomolec-532981a6/): Context explanation wrt. Applied Cryptography, Industry and Algebraic Geometry
+
+With the friendly essential support of Prof. Dr. Siegfried Rump (Head of the Institute for for Reliable Computing, TU Harburg
