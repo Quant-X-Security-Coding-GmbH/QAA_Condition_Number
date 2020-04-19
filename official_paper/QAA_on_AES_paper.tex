@@ -33,7 +33,10 @@ Dipl. Math. Xenia Bogomolec,
 % Images of authors
 {./PQS_logo_pure_with.png}
 % E-Mails
-{peter.nonnenmann@quant-x-sec.com,xb@quant-x-sec.com,}
+{peter.nonnenmann@quant-x-sec.com,xb@quant-x-sec.com,} 
+
+\noindent
+{\small \textit{With the friendly essential support of Prof. Dr. Siegfried Rump (Head of the Institute for for Reliable Computing, TU Harburg) }}
 
 
 
@@ -57,13 +60,13 @@ Dipl. Math. Xenia Bogomolec,
 \textit{We investigate the condition number of the Macaulay matrix in the Quantum Algebraic Attack \cite{QAA} on the symmetric cryptographic algorithm \textsc{AES} (Advanced Encryption Standard \cite{AES}). \textsc{AES} is the standardized version of \textsc{Rijndael} and globally used for hybrid encryption in protocols such as TLS, OpenPGP, SSH, IPSec, etc. as well as for purely symmetric applications such as hard disk encryption.} \\
 
 \noindent
-\textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} equals infinity, independent from the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} is not practical.} \\
+\textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} equals infinity, independent of the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} is not practical.} \\
 
 
 \section{Introduction}
 
 \noindent
-It is known for decades that currently used asymmetric cryptography relying on the hardness of integer factorization and discrete logarithm systems will no longer be valid with the advent of potent enough quantum computers. Quantum cryptanalyses on symmetric cryptography have been published far more recently, amongst them \\
+It is known that currently used asymmetric cryptography relying on the hardness of integer factorization and discrete logarithm systems will no longer be valid with the advent of potent enough quantum computers. Quantum cryptanalyses on symmetric cryptography have been published far more recently, amongst them \\
 
 \begin{itemize} [noitemsep, nolistsep]
   \item[1)] Quantum Algorithms for Boolean Equation Solving and Quantum Algebraic Attack on Cryptosystems \\
@@ -76,31 +79,31 @@ It is known for decades that currently used asymmetric cryptography relying on t
 \vspace{0.5cm}
 
 \noindent
-\textbf{Grover’s search algorithm} can be used to extract the key from a small number of \textsc{AES} plaintext-ciphertext pairs (e. g. $5$ for \textsc{AES}-$256$ \cite{GRO}). It is an alternative algorithm for an exhaustive key search (brute force attack). There are published papers with quantum resource estimates for \textsc{AES} \cite{GRO}, \textsc{eAES} \cite{KUN, CEX}, \textsc{SHA-3} \cite{QSH} and \textsc{SHA-2} \cite{QSH}. \\
+\textbf{Grover’s search algorithm} can be used to extract the key from a small number of \textsc{AES} plaintext-ciphertext pairs (e. g. $5$ for \textsc{AES}-$256$ \cite{GRO}). It is an alternative algorithm for an exhaustive key search (brute force attack). There are papers with quantum resource estimates for \textsc{AES} \cite{GRO}, \textsc{eAES} \cite{KUN, CEX}, \textsc{SHA-3} \cite{QSH} and \textsc{SHA-2} \cite{QSH}. \\
 
 \noindent
-The \textbf{Chen-Gao quantum algorithm} raised expectations to a harder impact on the security of \textsc{AES}-$256$. It involves a quantum algebraic attack on cryptosystems, which can be reduced to Boolean equation solving. This attack reduces the security level of \textsc{AES}-$256$ from $256$ to $78.53$, with a factor $\kappa^2$, the condition number of the Boolean equation system used in the algorithm. The condition number $\kappa$ depends on the cryptosystem which is solved by the Chen-Gao quantum algorithm. We investigated the condition numer of \textsc{AES}-$256$. \\
+The \textbf{Chen-Gao quantum algorithm} raised expectations to a harder impact on the security of \textsc{AES}-$256$. It involves a quantum algebraic attack on cryptosystems, which can be reduced to Boolean equation solving. This attack reduces the security level of \textsc{AES}-$256$ from $256$ to $78.53$, with a factor $\kappa^2$, the condition number of the Boolean equation system used in the algorithm. The condition number $\kappa$ depends on the cryptosystem which is solved by the Chen-Gao quantum algorithm. We investigate the condition numer of \textsc{AES}-$256$. \\
 
 
 \section{Chen-Gao Quantum Algorithm: A Quantum Algebraic Attack}
 
 \noindent
-The authors of \cite{QAA} present an algorithm which leads to new considerations of the security of systems which can be reduced to solving Boolean equations. A solution $a$ for the equation $\mathcal{F} \cdot a = 0$ with a set of polynomials $\mathcal{F} \subset \mathbb{C}[X]$ is called \textit{Boolean} if each coordinate of $a$ is either $0$ or $1$. For the detailed description of the Chen-Gao quantum algorithm, we refer to the original paper \cite{QAA}.\\
+The authors of \cite{QAA} present an algorithm which leads to new considerations of the security of systems which can be reduced to solving Boolean equations. A solution $a$ for the equation $\mathcal{F} \cdot a = 0$ with a set of polynomials $\mathcal{F} \subset \mathbb{C}[X], X = (x_1, \ldots, x_n) \,$ for an $ n \in \mathbb{N}$, is called \textit{Boolean} if each coordinate of $a$ is either $0$ or $1$. For the detailed description of the Chen-Gao quantum algorithm, we refer to the original paper \cite{QAA}.\\
 
 \noindent
-The resulting quantum algebraic attack algorithm includes quantum-monomial solving of polynomial systems over $\mathbb{C}$ by applying a Macaulay linear system. Like this they constructed a Boolean equation solving algorithm, with the following properties: \\
+The resulting quantum algebraic attack algorithm includes quantum-monomial solving of polynomial systems over $\mathbb{C}$ by applying a Macaulay linear system. Like this they construct a Boolean equation solving algorithm, with the following properties: \\
 
 \begin{itemize} [noitemsep, nolistsep]
   \item[1)] It decides if there exists a Boolean solution.
   \vspace{0.1cm}
-  \item[2)] It returns a Boolean solution with a given probability if there are such solutions to the system.
+  \item[2)] With a given probalility it finds a Boolean solution if there are such solutions to the system.
   \vspace{0.1cm}
   \item[3)] It returns $\emptyset$ if no Boolean solution exists.
 \end{itemize}
 \vspace{0.5cm}
 
 \noindent
-The matrix $M_{mca}$, which represents the Macaulay linear system of the attacked crypto system, defines the desired condition number $\kappa$. In order to derive $M_{mca}(AES)$ and then compute $\kappa$ of \textsc{AES}, we take a look at the structure of \textsc{AES}.
+The matrix $A_{mca}$, which represents the Macaulay linear system of the attacked crypto system, defines the desired condition number $\kappa$. In order to derive $A_{mca}(AES)$ and then compute $\kappa$ of \textsc{AES}, we take a look at the structure of \textsc{AES}. The derived condition number $\kappa$ is that of the matrix $A_{mca}(AES)$.
 
 
 \subsection{Mathematical structure of \textsc{AES}}
@@ -140,7 +143,7 @@ The $4$ basic functions of the \textsc{Rijndael} encryption are: \\
 
 \vspace{0.3cm}
 \noindent
-The matrix $M$($S$-Box) representing the $S$-Box will be the base of our computation. By showing that the condition number of its Macaulay matrix $M_{mca}$($S$-Box) equals $\infty$, the condition number of $M_{mca}(AES)$ equals $\infty$ as a result of matrix multiplication. ShiftRows only shifts terms of the polynomial in a row, so this operation does not change the ideal represented by $M$($S$-Box). \\
+The matrix $M$($S$-Box) representing the $S$-Box will be the base of our computation. By showing that the condition number of its Macaulay matrix $A_{mca}$($S$-Box) equals $\infty$, the condition number of $A_{mca}(AES)$ equals $\infty$ as a result of matrix multiplication. ShiftRows only shifts terms of the polynomial in a row, so this operation does not change the ideal represented by $M$($S$-Box). \\
 
 \noindent
 MixColumns is the multiplication of each column by the polynomial $3x^{3}+x^{2}+x+2$ modulo $x^4+1$. As each product of an element of an ideal and an arbritrary element of the ring is an element of the ideal as well, this operation doesn't change the ideal neither.\\
@@ -148,7 +151,7 @@ MixColumns is the multiplication of each column by the polynomial $3x^{3}+x^{2}+
 
 \subsection{Analysis}
 \noindent 
-{\small \textit{Result by P. Nonnenmann with the friendly support of Siegfried Rump (Head for Reliable Computing, TU Harburg). \\
+{\small \textit{Result by P. Nonnenmann with the friendly support of Prof. Dr. Siegfried Rump (Head of the Institute for for Reliable Computing, TU Harburg). \\
 Algebraic Geometric context explanation by Xenia Bogomolec.}}\\
 
 \noindent
@@ -201,7 +204,7 @@ $$dim(M_{F,D})= ( r (d+1)^n ) \times ((\overline{D} + 1 )^n -1)
 = (r \cdot 2^{n \delta})(2^{n \Delta} -1 ),$$
 
 \noindent
-with the given parameters above. $M_{F,D}$ represents $M_{mca}$($S$-Box) from section 3.1. We switch from a labeling with cryptographic parameters to a labeling with algebraic parameters for a better understanding of the immediate context.\\
+with the given parameters above. $M_{F,D}$ represents $A_{mca}$($S$-Box) from section 3.1. We switch from a labeling with cryptographic parameters to a labeling with algebraic parameters for a better understanding of the immediate context.\\
 
 \noindent
 \textbf{Remark 3.2.3} \\
@@ -237,17 +240,21 @@ $\kappa(M)=\infty$. \\
 \noindent
 \textbf{Proof of Theorem 3.2.7} \\
 First note that $M$ has at least one $0$-row and one $0$-column by remarks 3.3 and 3.4 (Actually, for this proof, the existence of a $0$-row OR a $0$-column is sufficient.) Then $M^\intercal M = f$ has at least one $0$-row, too, by matrix multiplication. Then $rank(f) \leq N-1$, and by the dimension-formula for linear maps, it follows that $dim \,ker(f) + rank(f) \leq dim \,ker(f) + N-1$, so $N \leq dim \,ker(f) + N-1$.\\
-Assume that $dim \,ker(f) = 0$, then it also holds that $N \leq N-1$, which isa contradiction. Therefore we have $dim \,ker(f) \geq 1$ and  $dim \,Eig(f,0) \geq 1$, 
+Assume that $dim \,ker(f) = 0$, then it also holds that $N \leq N-1$, which is a contradiction. Therefore we have $dim \,ker(f) \geq 1$ and  $dim \,Eig(f,0) \geq 1$, 
 which in turn means, that $f$ has the eigenvalue $\lambda = 0$. So $M$ has the singular value $s = 0 = s_{min}$, the minimal singular value, and
 $k(M ) = \frac{s_{max}}{s_{min}} = \infty$. \\
 
 \noindent
 \textbf{Theorem 3.2.8} \\
-$\kappa(M_{mca}(S$-Box$))=\infty$, the condition number of the whole polynomial system $F$ is infinite. \\
+$\kappa(A_{mca}(S$-Box$))=\infty$, the condition number of the whole polynomial system $F$ is infinite. \\
 
 \noindent
 \textbf{Proof of Theorem 3.2.8} \\
 In the paper \cite{QAA}, algorithm 4.2 has the following properties: The runtime complexity of the algorithm is  $\mathcal{O}(n^{2.5}(n + T_F)\kappa^2 \log(\frac{1}{\epsilon})$, where $\kappa$ is the maximal condition number for all matrices $M_{\mathcal{F}_2,D}$ in Step $4$, called the CONDITION NUMBER $\kappa(F) = \kappa)$ for the polynomial system $F$. By their Lemma 4.5, there are at most $n$ iterations in the loop, where the matrices $M_{\mathcal{F}_2,D}$ are used. Since all their condition numbers are infinite, the condition number of the polynomial system is infinite as well, and so is the runtime complexity of the Chen-Gao-Algorithm (Theorem 4.3). \\
+
+\noindent
+\textbf{Implications with regards to \textsc{AES}:}
+The total sparseness of \textsc{AES}-$256$ is $696\,384 < 10^6$ (number of "$1$"-entries in $A_{mca}(S$-Box). And $Dim(A_{mca}(S$-Box$)) = (> 10^{500} \times > 10^{500})$. Now, even if there exist $10^6$ rows with one $1$, and $10^6$ columns with one $1$, there must exist many $0$-rows and $0$-columns. \\ 
 
 
 \section{Conclusion}
