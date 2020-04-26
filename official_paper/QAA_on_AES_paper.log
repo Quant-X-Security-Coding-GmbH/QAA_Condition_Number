@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.10)  21 APR 2020 12:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.10)  26 APR 2020 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1537,154 +1537,149 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--147
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
+Underfull \hbox (badness 10000) in paragraph at lines 154--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
+Underfull \hbox (badness 10000) in paragraph at lines 161--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--162
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--169
+Underfull \hbox (badness 10000) in paragraph at lines 164--170
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
+Underfull \hbox (badness 10000) in paragraph at lines 177--179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--182
+Underfull \hbox (badness 10000) in paragraph at lines 180--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--191
+Underfull \hbox (badness 10000) in paragraph at lines 188--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--195
+Underfull \hbox (badness 10000) in paragraph at lines 193--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
+Underfull \hbox (badness 10000) in paragraph at lines 197--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--212
+Underfull \hbox (badness 10000) in paragraph at lines 210--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--217
+Underfull \hbox (badness 10000) in paragraph at lines 214--218
 
  []
 
-<Macaulay.png, id=97, 1018.80624pt x 251.94125pt>
+<Macaulay.png, id=99, 1018.80624pt x 251.94125pt>
 File: Macaulay.png Graphic file (type png)
 <use Macaulay.png>
-Package pdftex.def Info: Macaulay.png  used on input line 220.
+Package pdftex.def Info: Macaulay.png  used on input line 221.
 (pdftex.def)             Requested size: 398.33858pt x 98.50656pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 221.
+(caption)                particular \caption on input line 222.
 See the caption package documentation for explanation.
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 225--228
+[3 <./Macaulay.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 232--234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--232
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
+Underfull \hbox (badness 10000) in paragraph at lines 238--241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--239
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--246
+Underfull \hbox (badness 10000) in paragraph at lines 245--248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--250
+Underfull \hbox (badness 10000) in paragraph at lines 249--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--254
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--263
 
  []
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 256.
+(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 265.
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--258
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--264
+Underfull \hbox (badness 10000) in paragraph at lines 264--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--269
-
- []
-
-[4 <./Macaulay.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
+Underfull \hbox (badness 10000) in paragraph at lines 268--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--280
+Underfull \hbox (badness 10000) in paragraph at lines 271--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--283
+Underfull \hbox (badness 10000) in paragraph at lines 276--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--288
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 285--288
 
  []
 
@@ -1694,28 +1689,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 289--291
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--294
+Underfull \hbox (badness 10000) in paragraph at lines 292--295
 
  []
 
-<hybrid-encryption.jpg, id=121, 705.63625pt x 299.1175pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--303
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--307
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
+
+ []
+
+<hybrid-encryption.jpg, id=124, 705.63625pt x 299.1175pt>
 File: hybrid-encryption.jpg Graphic file (type jpg)
 <use hybrid-encryption.jpg>
-Package pdftex.def Info: hybrid-encryption.jpg  used on input line 297.
+Package pdftex.def Info: hybrid-encryption.jpg  used on input line 321.
 (pdftex.def)             Requested size: 341.43306pt x 144.73405pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 298.
+(caption)                particular \caption on input line 322.
 See the caption package documentation for explanation.
 
-[5 <./hybrid-encryption.jpg>]
-Underfull \hbox (badness 5533) in paragraph at lines 371--375
+[5]
+Underfull \hbox (badness 5533) in paragraph at lines 395--399
 []\T1/ptm/m/n/10.95 BSI, Fed-eral Of-fice for In-for-ma-tion Se-cu-rity Ger-man
 y,  En-twick-lungs-stand Quan-ten-com-puter
  []
 
 
-Underfull \hbox (badness 1292) in paragraph at lines 377--380
+Underfull \hbox (badness 1292) in paragraph at lines 401--404
 []\T1/ptm/m/n/10.95 S. Ran, C. Eck-berg, Q.-P. Ding, Y. Fu-rukawa, T. Metz, S.R
 . Saha, I-L. Liu, M. Zic, H. Kim,
  []
@@ -1724,33 +1744,26 @@ Underfull \hbox (badness 1292) in paragraph at lines 377--380
 \openout10 = `QAA_on_AES_paper.thm'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 403.
+(babel)             in language  on input line 427.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 403.
+(babel)             in language  on input line 427.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 403.
+(babel)             in language  on input line 427.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 403.
-[6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 403.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 403.
+(babel)             in language  on input line 427.
+[6 <./hybrid-encryption.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 427.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 427.
  (./QAA_on_AES_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 403.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 403.
-
-
-Package rerunfilecheck Warning: File `QAA_on_AES_paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `QAA_on_AES_paper.out':
-(rerunfilecheck)             Before: 1F11D90D93F2FE8ACB41DF7D43CB42D5;673
-(rerunfilecheck)             After:  E66A0FF7077909A57A53D6044E242173;660.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 427.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 427.
+Package rerunfilecheck Info: File `QAA_on_AES_paper.out' has not changed.
+(rerunfilecheck)             Checksum: E66A0FF7077909A57A53D6044E242173;660.
  ) 
 Here is how much of TeX's memory you used:
  26189 strings out of 492982
  488690 string characters out of 6134896
- 584102 words of memory out of 5000000
+ 585102 words of memory out of 5000000
  29164 multiletter control sequences out of 15000+600000
  54391 words of font info for 65 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1771,10 +1784,10 @@ ive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on QAA_on_AES_paper.pdf (6 pages, 285971 bytes).
+Output written on QAA_on_AES_paper.pdf (6 pages, 289625 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
+ 201 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
  34 named destinations out of 1000 (max. 500000)
  108 words of extra memory for PDF output out of 10000 (max. 10000000)
 
