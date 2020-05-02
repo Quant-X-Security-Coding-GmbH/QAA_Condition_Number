@@ -60,7 +60,7 @@ Dipl. Math. Xenia Bogomolec,
 \textit{We investigate the condition number of the Macaulay matrix in the Quantum Algebraic Attack \cite{QAA} on the symmetric cryptographic algorithm \textsc{AES} (Advanced Encryption Standard \cite{AES}). \textsc{AES} is the standardized version of \textsc{Rijndael} and globally used for hybrid encryption in protocols such as TLS, OpenPGP, SSH, IPSec, etc. as well as for purely symmetric applications such as hard disk encryption.} \\
 
 \noindent
-\textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} equals infinity, independent of the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} is not practical.} \\
+\textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} under the classical notion of a condition number $\kappa$ of a matrix equals infinity, independent of the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} is not practical under these defined circumstances.} \\
 
 
 \section{Introduction}
@@ -291,7 +291,15 @@ Besides \textsc{AES} and \textsc{Keccak}, stream ciphers such as \textsc{Trivium
 
 \noindent
 \textbf{Remark 4.1} \\
-This paper is based on purely mathematical theorems and their corresponding mathematical proofs. By no means can we make a definite statement or prediction about the potential physical outcome of an actual attack on eAES with a quantum computer in the future under unforeseeable evolvements in mathematics or physics. \\
+This paper is based on purely mathematical theorems, under the consideration of the classical notion of a condition number $\kappa$ of a matrix, and their corresponding mathematical proofs. By no means can we make a definite statement or prediction about: \\
+
+\begin{itemize} [noitemsep, nolistsep]
+  \item[1)] The modified notion of condition number of a matrix with zero eigenvalues, where the inversion takes only place on the orthogonal complement of the kernel \cite{SCH}. The modified condition number for \textsc{AES} remains to be investigated.
+  \vspace{0.1cm}
+  \item[2)] The potential physical outcome of an actual attack on eAES with a quantum computer in the future under unforeseeable evolvements in mathematics or physics.\\
+  \vspace{0.1cm}
+\end{itemize}
+\vspace{0.5cm}
 
 
 \section{Context}
@@ -385,6 +393,11 @@ A.W. Harrow, A.Hassidim, S.Lloyd,
   S.~Shankland,
   \newblock MSN News,
   \newblock { \em https://www.msn.com/en-us/news/technology/ibms-new-53-qubit-quantum-computer-is-its-biggest-yet/ar-AAHtPaW}, September 2019.
+
+\bibitem{SCH}
+  P.~Schleich,
+  \newblock How to solve a linear system of equations using a quantum computer,
+  \newblock { \em http://www.mathcces.rwth-aachen.de/\_media/3teaching/00projects/schleich.pdf}, July 2019.
 
 \bibitem{googleai}
   J.~Kelly,
