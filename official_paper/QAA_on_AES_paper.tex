@@ -18,7 +18,7 @@
 \Aufsatz 
 % Title
 {Complexity of the Quantum Algebraic Attack on AES:\\
-The condition number of the Macualay Matrix}
+The Condition Number of the Macaulay Matrix}
 % Short title for the table of contents
 {Complexity of the Quantum Algebraic Attack on AES}
 % Authors
@@ -36,7 +36,7 @@ Dipl. Math. Xenia Bogomolec,
 {peter.nonnenmann@quant-x-sec.com,xb@quant-x-sec.com,} 
 
 \noindent
-{\small \textit{With the friendly essential support of Prof. Dr. Siegfried Rump (Head of the Institute for Reliable Computing, TU Harburg) }}
+{\small \textit{With the friendly essential support of Prof. Dr. Siegfried Rump (Head of the Institute for Reliable Computing, TU Harburg) and Christoph Stockhammer (MathWorks)}}
 
 
 
@@ -57,13 +57,13 @@ Dipl. Math. Xenia Bogomolec,
 \section{Abstract}
 
 \noindent
-\textit{We investigate the condition number of the Macaulay matrix in the Quantum Algebraic Attack \cite{QAA} on the symmetric cryptographic algorithm \textsc{AES} (Advanced Encryption Standard \cite{AES}). \textsc{AES} is the standardized version of \textsc{Rijndael} and globally used for hybrid encryption in protocols such as TLS, OpenPGP, SSH, IPSec, etc. as well as for purely symmetric applications such as hard disk encryption.} \\
+\textit{We investigate the condition number of the Macaulay matrix in the Quantum Algebraic Attack \cite{QAA} on the symmetric cryptographic algorithm \textsc{AES} (Advanced Encryption Standard \cite{AES}). The Quantum Algebraic Attack is a quantum cryptanalysis, which can be applied to cryptographic algorithms based on polynomial systems that can be reduced to Boolean equation systems. \textsc{AES} is the standardized version of \textsc{Rijndael} and globally used for hybrid encryption in protocols such as TLS, OpenPGP, SSH, IPSec, etc. as well as for purely symmetric applications such as hard disk encryption. The S-Box of \textsc{Rijndael} is a polynomial system which can be reduced to a Boolean equantion system.} \\
 
 \noindent
 \textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} under the classical notion of a condition number $\kappa$ of a matrix equals infinity, independent of the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} is not practical under these defined circumstances. } \\
 
 \noindent
-\textit{The computation of the modified notion of the condition number $\kappa$ of the involved Macaulay matrix requires the explicit generation of a derived reduced matrix and the computation of its condition number. These investigations are currently ongoing in our independent research project. } \\
+\textit{The computation of the modified notion of the condition number $\kappa$ of the involved Macaulay matrix requires the explicit generation of its derived reduced matrix and the computation of its condition number. These investigations are currently ongoing in our independent research project. } \\
 
 
 \section{Introduction}
@@ -85,7 +85,17 @@ It is known that currently used asymmetric cryptography relying on the hardness 
 \textbf{Grover’s search algorithm} can be used to extract the key from a small number of \textsc{AES} plaintext-ciphertext pairs (e. g. $5$ for \textsc{AES}-$256$ \cite{GRO}). It is an alternative algorithm for an exhaustive key search (brute force attack). There are papers with quantum resource estimates for \textsc{AES} \cite{GRO}, \textsc{eAES} \cite{KUN, CEX}, \textsc{SHA-3} \cite{QSH} and \textsc{SHA-2} \cite{QSH}. \\
 
 \noindent
-The \textbf{Chen-Gao quantum algorithm} raised expectations to a harder impact on the security of \textsc{AES}-$256$. It involves a quantum algebraic attack on cryptosystems, which can be reduced to Boolean equation solving. This attack reduces the security level of \textsc{AES}-$256$ from $256$ to $78.53$, with a factor $\kappa^2$, the condition number of the Boolean equation system used in the algorithm. The condition number $\kappa$ depends on the cryptosystem which is solved by the Chen-Gao quantum algorithm. We investigate the condition numer of \textsc{AES}-$256$. \\ 
+The \textbf{Chen-Gao quantum algorithm} raised expectations to a harder impact on the security of \textsc{AES}. It is based on the \textsc{HHL} quantum algorithm \cite{HHL} and involves a quantum algebraic attack on cryptosystems, which can be reduced to Boolean equation solving. This attack reduces the security level of \textsc{AES}-$256$ from $256$ to $78.53$, with a factor \textit{c}, the complexity constant of the \textsc{HHL} algorithm and $\kappa^2$, the condition number of the Boolean equation system used in the algorithm. The condition number $\kappa$ depends on the cryptosystem which is solved by the Chen-Gao quantum algorithm. It has a quadratic impact on the complexity of \textsc{AES} because it stems from the S-Box, which is used twice within the algorithm: for the key schedule and during the block encryption/decryption. \\
+
+\begin{figurehere}
+  \centering
+  \includegraphics[width=12cm]{AES_table.png}
+  \caption{Complexities of the Quantum Algebraic Attack on AES, table 2 \cite{QAA}.\label{abb_1}}
+\end{figurehere}
+
+\vspace{0.3cm} 
+We investigate the condition number of \textsc{AES}-$256$. \\ 
+
 
 
 \section{Chen-Gao Quantum Algorithm: A Quantum Algebraic Attack}
@@ -110,9 +120,44 @@ The matrix $A_{mca}$, which represents the Macaulay linear system of the attacke
 
 
 \subsection{Structure of \textsc{AES}}
-\noindent
-All \textsc{Rijndael} functions are linear. Only the basic encryption function \textit{SubBytes} (see section Basic \textsc{Rijndael} encryption functions) is often referred as the non-linear part of \textsc{AES}, but in fact it is linear as well. Well chosen linear layers with very strong diffusion properties protect against conventional attacks using statistical properties of a cryptosystem. In the case of the quantum algebraic attack, this effect is limited. \\
 
+\noindent
+\textsc{Rijndael} is a block cipher. That means that the basic encryption functions are iterated a certain number of rounds with dedicated round keys over the state. With $r = $ number of rounds, the encryption process is:\\
+
+\begin{itemize} [noitemsep, nolistsep]
+\item[(1)] \textbf{Derive round keys}\\
+Call \textit{ExpandKey}\,(key) to derive $r+1$ round keys from the secret key. The $+ 1$ stands for the fact that \textit{Add\-RoundKey} is called additionally before each block encryption. 
+\vspace{0.1cm}
+\item[(2)] \textbf{Encryption}\\
+Perform on each block of data represented by the \glqq state\grqq: 
+\vspace{0.1cm}
+  \begin{itemize} [noitemsep, nolistsep]
+    \item[a)] Initial round:
+      \begin{itemize} [noitemsep, nolistsep]
+        \item[] Add the plaintext to the state 
+        \item[] \textit{AddRoundKey}\,(state, $1$st round key)
+      \end{itemize} 
+    \vspace{0.1cm}
+    \item[b)] For ($i=2$; $i\leq r-1$, $i$++):
+    \vspace{0.1cm}
+    \begin{itemize} [noitemsep, nolistsep]
+        \item[] \textit{SubBytes}\,(state) 
+        \item[] \textit{ShiftRows}\,(state) 
+        \item[] \textit{MixColumns}\,(state) 
+        \item[] \textit{AddRoundKey}\,(state, $i$-th round key) 
+    \end{itemize} 
+    \vspace{0.1cm}
+    ($4$ basic \textsc{Rijndael} encryption functions)
+    \vspace{0.1cm}
+    \item[c)] The final round:
+    \begin{itemize} [noitemsep, nolistsep]
+        \item[] \textit{SubBytes}\,(state)
+        \item[] \textit{ShiftRows}\,(state)
+        \item[] \textit{AddRoundKey}\,(state, last round key) 
+    \end{itemize} 
+  \end{itemize}
+\end{itemize}
+\vspace{0.5cm}
 
 The $4$ basic functions of the \textsc{Rijndael} encryption are: \\
 
@@ -146,17 +191,17 @@ The $4$ basic functions of the \textsc{Rijndael} encryption are: \\
 
 \vspace{0.3cm}
 \noindent
-The matrix $A$($S$-Box) representing the $S$-Box will be the base of our computation. ShiftRows only shifts terms of the polynomial in a row, and MixColumns is the multiplication of each column by the polynomial $3x^{3}+x^{2}+x+2$ modulo $x^4+1$. Both functions only produce diffusion.  \\
+The matrix $A$($S$-Box) representing the polynomial system of the $S$-Box will be the base of our computation, as its condition number is the $\kappa$ of  \textsc{AES}. ShiftRows only shifts terms of the polynomial in a row, and MixColumns is the multiplication of each column by the polynomial $3x^{3}+x^{2}+x+2$ modulo $x^4+1$. Both functions only produce diffusion and contribute to $2^{78.53}$ in the complexity of \textsc{AES}. \\
 
 \noindent
-Later we will show that the Macaulay matrix of $A$($S$-Box) has $0$-rows and $0$-columns, even if all non-zero entries are distributed to dedicated rows and columns. No diffusion performed on the $S$-Box can change this fact. On the other hand, the existence of either a $0$-row or a $0$-column will imply that the condition number $\kappa$ of a matrix equals $\infty$.
-So if the condition number of the Macaulay matrix $A_{mca}$($S$-Box) equals $\infty$, then the condition number of $A_{mca}(AES)$ equals $\infty$ as well.
+In the next section we will show that the Macaulay matrix of $A_{mca}$($S$-Box) defined in \cite{QAA} has $0$-rows and $0$-columns, even if all non-zero entries are distributed to dedicated rows and columns. No chosen monomial ordering on the creation of the matrix can change this fact. On the other hand, the existence of either a $0$-row or a $0$-column will imply that the classical condition number $\kappa$ of a matrix equals $\infty$.The existence of $0$-rows can be ignored if we shift to a modified notion of a conditon number of a matrix. \\
 
 
-\subsection{Analysis}
+\subsection{Analysis for the Classical Notion of a Condition Number}
 \noindent 
-{\small \textit{Result by P. Nonnenmann with the friendly support of Prof. Dr. Siegfried Rump (Head of the Institute for for Reliable Computing, TU Harburg). \\
-Algebraic Geometric context explanation by Xenia Bogomolec.}}\\
+{\small \textit{Result by P. Nonnenmann with the friendly support of \\
+Prof. Dr. Siegfried Rump (Head of the Institute for for Reliable Computing, TU Harburg) and\\
+Christoph Stockhammer, MathWorks.}}\\
 
 \noindent
 In the analysis of the Chen-Gao quantum algorithm on \textsc{AES}, we make the same definitions as Chen-Gao, and use the same numeration of definitions, remarks, Theorems  etc. Let $\mathbb{C}$ b the field of complex numbers and $\mathbb{C}[X]$ the polynomial ring in the indeterminates $X = x_1, \ldots, x_n, \, n \in \mathbb{N}$ over $\mathbb{C}$. \\
@@ -277,19 +322,17 @@ So we have for $\mathcal{M}$, the number of rows in $A_{mca}(S$-Box): $\mathcal{
 And for $\mathcal{N}$, the number of columns in $A_{mca}(S$-Box), we have: $\mathcal{N} \geq 4^{1792} > 10^{500}$. \\
 
 \noindent
-The number of entries $\neq 0 = 1$ equals the $\mathcal{T}$-sparseness in table $2$ on page $26$ of \cite{QAA}. This is at most $696\,384 < 10^6$ for \textsc{AES}-$256$. On the other side, even if we have $500\,000$ ones and zeros in separate rows and columns, there must at least exist one $o$-row and one $0$-column in $A_{mca}(S$-Box).\\ 
+The number of entries $\neq 0 = 1$ equals the $\mathcal{T}$-sparseness in table $2$ on page $26$ of \cite{QAA}. This is at most $696\,384 < 10^6$ for \textsc{AES}-$256$. On the other side, even if we have $500\,000$ ones and zeros in separate rows and columns, there must at least exist one $0$-row and one $0$-column in $A_{mca}(S$-Box).\\ 
 
 
-\section{Conclusion}
-
-\noindent
-The conclusion of \cite{QAA} is, that systems which can be solved by Boolean equation solving, are only secure under quantum algebraic attack, if the condition number $\kappa$ is large. The runtime complexity of the resulting quantum algebraic attack depends on two factors: a constant $c$ and a condition number $\kappa$. The complexity of $2^{78.53}c\kappa^2$ for \text{AES}-$256$ is not much higher than the complexity of $2^{73.30}c\kappa^2$ for \text{AES}-$128$ due to the same block size of $128$ bit. Therefore we can assume that the complexity won't be much higher for $512$-bit key sizes.\\
+\section{Intermediary Conclusion and Next Steps}
 
 \noindent
-The classical condition number $\kappa = \infty$ of $A_{mca}(S$-Box) in \textsc{AES} does not depend on the key size. It implies that the complexity of the quantum algebraic attack on \textsc{AES} equals infinity as well, if only the classical notion of the condition number of a matrix is considered. \\
+The conclusion of \cite{QAA} is, that systems which can be solved by Boolean equation solving, are only secure under quantum algebraic attack, if the condition number $\kappa$ is large. The complexity of $2^{78.53}c\kappa^2$ for \text{AES}-$256$ is not much higher than the complexity of $2^{73.30}c\kappa^2$ for \text{AES}-$128$ due to the same block size of $128$ bit.\\
+The condition number $\kappa = \infty$ of $A_{mca}(S$-Box) in \textsc{AES} does not depend on the key size. It implies that the complexity of the quantum algebraic attack on \textsc{AES} equals infinity as well, if only the classical notion of the condition number of a matrix is considered. \\
 
 \noindent
-The consideration of the modified notion of a condition number, which allows ignoring zero singular values of a Boolean Equation System, requires the explicit generation of the involved reduced Macaulay matrix and the computation of its condition number. these investigations are currently ongoing in our independent research project. \\
+The consideration of the modified notion of a condition number, which allows ignoring zero singular values of a Boolean Equation System, requires the explicit generation of the involved reduced Macaulay matrix and the computation of its condition number. These investigations are currently ongoing in our independent research project. \\
 
 \noindent
 Besides \textsc{AES} and \textsc{Keccak}, stream ciphers such as \textsc{Trivium} and the multivariate public key cryptosystem \textsc{MPKC} are affected by the attack. The condition numbers of those Macaulay systems remain to be investigated.\\
@@ -301,7 +344,7 @@ This paper is based on purely mathematical theorems, under the consideration of 
 \begin{itemize} [noitemsep, nolistsep]
   \item[1)] The modified notion of condition number of a matrix with zero eigenvalues, where the inversion takes only place on the orthogonal complement of the kernel \cite{SCH}. The modified condition number for \textsc{AES} remains to be investigated.
   \vspace{0.1cm}
-  \item[2)] The potential physical outcome of an actual attack on eAES with a quantum computer in the future under unforeseeable evolvements in mathematics or physics.\\
+  \item[2)] The potential physical outcome of an actual attack on \textsc{AES} with a quantum computer in the future under unforeseeable evolvements in mathematics or physics.\\
   \vspace{0.1cm}
 \end{itemize}
 \vspace{0.5cm}
@@ -379,6 +422,11 @@ M.~Amy, O.~Di Matteo, V.~Gheorghiu, M.~Mosca, A.~Parent, J.~Schanck,
   \newblock Estimating the cost of generic quantum pre-image attacks on SHA-2 and SHA-3s, 
   \newblock { \em https://eprint.iacr.org/2016/992.pdf} QCrypt, 2016.
 
+\bibitem{HHL}
+A.W. Harrow, A.Hassidim, S.Lloyd, 
+  \newblock Quantum algorithm for linear systems equations, 
+  \newblock  { \em Physical Review Letters, 103(15)}: 150502, 2009. 
+
 \bibitem{MCA}
 F.S.M~acaulay, 
   \newblock Some formulas in elimination, 
@@ -389,10 +437,6 @@ K.~Batselier, P.~Dreesen, B.~De Moor,
   \newblock On the null spaces of the Macaulay matrix, 
   \newblock { \em https://www.eee.hku.hk/~kimb/pdfs/MacaulayMatrix.pdf}.  
 
-\bibitem{HHL}
-A.W. Harrow, A.Hassidim, S.Lloyd, 
-  \newblock Quantum algorithm for linear systems equations, 
-  \newblock  { \em Physical Review Letters, 103(15)}: 150502, 2009. 
 
 \bibitem{MSN}
   S.~Shankland,
