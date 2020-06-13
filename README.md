@@ -11,8 +11,9 @@ by Y.-A.Chen, X.-S.Gao, https://arxiv.org/abs/1712.06239}, 2018.
 
 ## History
 
-* In a first step, we looked at the condition number of the globally used symmetric Advanced Encryption Standard AES. 
-* Based on the the condition number of AES we could easily derive the condition number of eAES.
+* In a first step, we looked at the cassical condition number of the globally used symmetric Advanced Encryption Standard AES. 
+* The second phase will consist of the explicit generation of the reduced Macaulay matrix of the polynomial system derived from the S-Box and the actual computation of its condition number.
+* With the identified mechanisms we will derive the condition number of eAES and other crypto systems.
 
 
 ## Cross References
@@ -27,4 +28,6 @@ https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/official_paper/QAA
 * [Dr. Peter Nonnenmann](https://www.linkedin.com/in/peter-dr-nonnenmann-737857a0/): Core Analysis, see [his original paper](https://github.com/XeniaGabriela/QAA_Condition_Nr/tree/master/results_nonnenmann_rump)
 * [Xenia Bogomolec](https://www.linkedin.com/in/xenia-bogomolec-532981a6/): Context explanation wrt. Applied Cryptography, Industry and Algebraic Geometry
 
-With the friendly essential support of Prof. Dr. Siegfried Rump (Head of the Institute for for Reliable Computing, TU Harburg)
+With the friendly essential support of 
+* Prof. Dr. Siegfried Rump (Head of the Institute for for Reliable Computing, TU Harburg)
+* Christoph Stockhammer, MathWorks
