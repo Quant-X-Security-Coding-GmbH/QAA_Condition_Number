@@ -1,4 +1,8 @@
+<<<<<<< HEAD:official_paper/QAA_on_eAES_paper.log
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.10)  16 JUN 2020 20:24
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.10)  14 JUN 2020 18:22
+>>>>>>> 5929dce81ae7619a62d4f80f1b765ce868ba98a2:official_paper/QAA_on_AES_paper.log
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1818,7 +1822,11 @@ ive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
+<<<<<<< HEAD:official_paper/QAA_on_eAES_paper.log
 Output written on QAA_on_eAES_paper.pdf (7 pages, 329981 bytes).
+=======
+Output written on QAA_on_AES_paper.pdf (7 pages, 330224 bytes).
+>>>>>>> 5929dce81ae7619a62d4f80f1b765ce868ba98a2:official_paper/QAA_on_AES_paper.log
 PDF statistics:
  218 PDF objects out of 1000 (max. 8388607)
  185 compressed objects within 2 object streams
