@@ -17,10 +17,9 @@
 
 \Aufsatz 
 % Title
-{Complexity of the Quantum Algebraic Attack on AES:\\
-The Condition Number of the Macaulay Matrix}
+{Feasibility of the Quantum Algebraic Attack on eAES}
 % Short title for the table of contents
-{Complexity of the Quantum Algebraic Attack on AES}
+{Feasibility  of the Quantum Algebraic Attack on AES}
 % Authors
 {Dr. P. Nonnenmann, X. Bogomolec,}
 % Label of authors' names
@@ -29,7 +28,7 @@ The Condition Number of the Macaulay Matrix}
 {Dr. Peter Nonnenmann,
 {\small \textit{DHBW Mannheim and Quant-X Security {\&} Coding}} \\
 Dipl. Math. Xenia Bogomolec, 
-{\small \textit{CEO Quant-X Security {\&} Coding}} \\}
+{\small \textit{Quant-X Security {\&} Coding}} \\}
 % Images of authors
 {./PQS_logo_pure_with.png}
 % E-Mails
@@ -57,13 +56,14 @@ Dipl. Math. Xenia Bogomolec,
 \section{Abstract}
 
 \noindent
-\textit{We investigate the condition number of the Macaulay matrix in the Quantum Algebraic Attack \cite{QAA} on the symmetric cryptographic algorithm \textsc{AES} (Advanced Encryption Standard \cite{AES}). The Quantum Algebraic Attack is a quantum cryptanalysis, which can be applied to cryptographic algorithms based on polynomial systems that can be reduced to Boolean equation systems. \textsc{AES} is the standardized version of \textsc{Rijndael} and globally used for hybrid encryption in protocols such as TLS, OpenPGP, SSH, IPSec, etc. as well as for purely symmetric applications such as hard disk encryption. The S-Box of \textsc{Rijndael} is a polynomial system which can be reduced to a Boolean equantion system.} \\
+\textit{We investigate feasibilty of the Quantum Algebraic Attack \cite{QAA} on the symmetric cryptographic algorithm \textsc{eAES}. Our investigations are based on the condition number of the Macaulay matrix of  \textsc{AES} (Advanced Encryption Standard \cite{AES}) and the variations between \textsc{AES} and \textsc{eAES} and . \textsc{AES} is the standardized version of \textsc{Rijndael} and globally used for hybrid encryption in protocols such as TLS, OpenPGP, SSH, IPSec, etc. as well as for purely symmetric applications such as hard disk encryption. The Quantum Algebraic Attack is a quantum cryptanalysis, which can be applied to cryptographic algorithms which can be represented by Boolean Multivariate Equation System (BMQ). The S-Box of \textsc{Rijndael} is a polynomial system which can be reduced to a BMQ.} \\
 
 \noindent
-\textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} under the classical notion of a condition number $\kappa$ of a matrix equals infinity, independent of the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} is not practical under these defined circumstances. } \\
+\textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} and \textsc{eAES} equals infinity under the classical notion of a condition number $\kappa$ of a matrix, independent from the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} and \textsc{eAES} is not practical under this definition. } \\
 
 \noindent
 \textit{The computation of the modified notion of the condition number $\kappa$ of the involved Macaulay matrix requires the explicit generation of its derived reduced matrix and the computation of its condition number. These investigations are currently ongoing in our independent research project. } \\
+
 
 
 \section{Introduction}
