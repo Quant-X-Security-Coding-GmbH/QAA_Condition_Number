@@ -1,12 +1,21 @@
 # Condition Number of the Quantum Algebraic Attack on chosen Cryptosystems
 
-On the condition number of the Qantum Algebraic Attack (QAA) by Chen-Gao for chosen cryptosystems
+*Basic Research as Open Source Project between Science and Industry*
+
+Identifying Security Levels for chosen globally used cryptosystems wrt. the Quantum Algebraic Attack (QAA) by Chen-Gao.
+
 
 ## Objective
 
 This repository documents the work in progress on the investigation of the condition number of the scientific paper
 **Quantum Algorithms for Boolean Equation Solving and Quantum Algebraic Attack on Cryptosystems**
 by Y.-A.Chen, X.-S.Gao, https://arxiv.org/abs/1712.06239}, 2018.
+
+
+## Project Description
+
+* ([Slides in English](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description.pdf))
+* ([Slides in German](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description.pdf_DE))
 
 
 ## History
