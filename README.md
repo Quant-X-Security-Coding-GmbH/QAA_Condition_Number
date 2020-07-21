@@ -21,7 +21,7 @@ by Y.-A.Chen, X.-S.Gao, https://arxiv.org/abs/1712.06239}, 2018.
 ## History
 
 * In a first phase, we looked at the cassical notion of a condition number of the QAA on the globally used symmetric Advanced Encryption Standard AES. 
-* The second phase will consist of the explicit generation of the reduced Macaulay matrix of the polynomial system derived from the S-Box and the actual computation of its condition number.
+* The second (current) phase consists of the explicit generation of the reduced Macaulay matrix of the polynomial system derived from the S-Box and the actual computation of its condition number.
 
 
 ### Facts about the QAA
