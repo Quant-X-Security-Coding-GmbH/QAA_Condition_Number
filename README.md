@@ -14,7 +14,7 @@ by Y.-A.Chen, X.-S.Gao, https://arxiv.org/abs/1712.06239}, 2018.
 
 ## Project Description
 
-* [Slides in English](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description.pdf)
+* [Slides in English](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description_EN.pdf)
 * [Slides in German](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description_DE.pdf)
 
 
