@@ -20,14 +20,16 @@ by Y.-A.Chen, X.-S.Gao, https://arxiv.org/abs/1712.06239}, 2018.
 
 ## History
 
-* In a first step, we looked at the cassical notion of a condition number of the QAA on the globally used symmetric Advanced Encryption Standard AES. 
+* In a first phase, we looked at the cassical notion of a condition number of the QAA on the globally used symmetric Advanced Encryption Standard AES. 
 * The second phase will consist of the explicit generation of the reduced Macaulay matrix of the polynomial system derived from the S-Box and the actual computation of its condition number.
 
 
-### Facts about QAA on AES
+### Facts about the QAA
 
-* The QAA on AES is based on solving Boolean Multivariate Equation System (BMQ). 
-* The condition number of the QAA on AES, equals the condition number of the Macaulay matrix of the BMQ for AES.
+* The QAA on cryptosystems is based on solving Boolean Multivariate Equation System (BMQ). 
+
+#### Facts about the QAA on AES
+
 * The key and the expanded key are considered as key variables in the BMQ.
 * The derived sub keys are considered as state variables in the BMQ.
 * Due to the last two points, the key schedule function of AES has no explicit impact on the condition number of AES. 
@@ -45,8 +47,8 @@ by Y.-A.Chen, X.-S.Gao, https://arxiv.org/abs/1712.06239}, 2018.
 
 * eAES mathematical analysis wrt. Grover's Search by Xenia Bogomolec: ([eAES_post-quantum_math_analysis](https://github.com/XeniaGabriela/eAES_post-quantum_math_analysis))
 
-Scientific references used for the computation of the condition number see the references in the ([Official Paper](
-https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/official_paper/QAA_on_AES_paper.pdf)) on the Complexity of the Quantum Algebraic Attack on AES.
+For scientific references used for the computation of the condition number see the references in the ([Official Paper](
+https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/official_paper/QAA_on_AES_paper.pdf))
 
 
 ## Contributers
