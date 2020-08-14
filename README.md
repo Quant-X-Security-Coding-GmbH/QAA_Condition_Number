@@ -1,6 +1,6 @@
 # Condition Number of the Quantum Algebraic Attack on chosen Cryptosystems
 
-*Basic Research as Open Source Project between Science and Industry*
+*Fundamental Research as Open Source Project between Science and Industry*
 
 Identifying Security Levels for chosen globally used cryptosystems wrt. the Quantum Algebraic Attack (QAA) by Chen-Gao.
 
