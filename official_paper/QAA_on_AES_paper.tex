@@ -17,7 +17,7 @@
 
 \Aufsatz 
 % Title
-{Feasibility of the Quantum Algebraic Attack on eAES}
+{Feasibility of the Quantum Algebraic Attack on AES}
 % Short title for the table of contents
 {Feasibility  of the Quantum Algebraic Attack on AES}
 % Authors
@@ -56,10 +56,10 @@ Dipl. Math. Xenia Bogomolec,
 \section{Abstract}
 
 \noindent
-\textit{We investigate feasibilty of the Quantum Algebraic Attack \cite{QAA} on the symmetric cryptographic algorithm \textsc{eAES}. Our investigations are based on the condition number of the Macaulay matrix of  \textsc{AES} (Advanced Encryption Standard \cite{AES}) and the variations between \textsc{AES} and \textsc{eAES} and . \textsc{AES} is the standardized version of \textsc{Rijndael} and globally used for hybrid encryption in protocols such as TLS, OpenPGP, SSH, IPSec, etc. as well as for purely symmetric applications such as hard disk encryption. The Quantum Algebraic Attack is a quantum cryptanalysis, which can be applied to cryptographic algorithms which can be represented by Boolean Multivariate Equation System (BMQ). The S-Box of \textsc{Rijndael} is a polynomial system which can be reduced to a BMQ.} \\
+\textit{We investigate feasibilty of the Quantum Algebraic Attack \cite{QAA} on the symmetric cryptographic algorithm \textsc{AES}. Our investigations are based on the condition number of the Macaulay matrix of  \textsc{AES} (Advanced Encryption Standard). \textsc{AES} is the standardized version of \textsc{Rijndael} and globally used for hybrid encryption in protocols such as TLS, OpenPGP, SSH, IPSec, etc. as well as for purely symmetric applications such as hard disk encryption. The Quantum Algebraic Attack is a quantum cryptanalysis, which can be applied to cryptographic algorithms which can be represented by Boolean Multivariate Equation System (BMQ). The S-Box of \textsc{Rijndael} is a polynomial system which can be reduced to a BMQ.} \\
 
 \noindent
-\textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} and \textsc{eAES} equals infinity under the classical notion of a condition number $\kappa$ of a matrix, independent from the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} and \textsc{eAES} is not practical under this definition. } \\
+\textit{We show that the complexity of a Quantum Algebraic Attack on \textsc{AES} equals infinity under the classical notion of a condition number $\kappa$ of a matrix, independent from the key size. Therefore the application of Boolean equation solving \cite{QAA} on \textsc{AES} is not practical under this definition. } \\
 
 \noindent
 \textit{The computation of the modified notion of the condition number $\kappa$ of the involved Macaulay matrix requires the explicit generation of its derived reduced matrix and the computation of its condition number. These investigations are currently ongoing in our independent research project. } \\
@@ -243,7 +243,7 @@ Let $\overline{D} \in \mathbb{N}$ be the minimal integer such that $\overline{D}
 In this paper, the subscripts for a matrix or a vector always start from 0, because the complexity analysis oft the algorithm in this paper depends on the representation of the subscripts. \\
 
 \noindent
-For a quantum attack on cryptosystems such as \textsc{AES} and \textsc{eAES}, it is necessary to solve a polynomial equation system $F$ as above, which in the case of \textsc{AES} is given in terms of the \textsc{AES}-S-Box, see pages 32-34 in \cite{QAA}. This polynomial equation system is solved by solving an equivalent linear equation system, the so-called Macaulay linear system \cite{MCA} of $F$, and the Macaulay linear equation system of $F$ is solved by the \textsc{HHL} quantum algorithm, see \cite{HHL}.\\
+For a quantum attack on cryptosystems such as \textsc{AES} and \textsc{Keccak}, it is necessary to solve a polynomial equation system $F$ as above, which in the case of \textsc{AES} is given in terms of the \textsc{AES}-S-Box, see pages 32-34 in \cite{QAA}. This polynomial equation system is solved by solving an equivalent linear equation system, the so-called Macaulay linear system \cite{MCA} of $F$, and the Macaulay linear equation system of $F$ is solved by the \textsc{HHL} quantum algorithm, see \cite{HHL}.\\
 
 \noindent
 \textbf{Macaulay linear equation system:} $A_{F,D} \cdot m_D = b_{F,D}$,
@@ -370,7 +370,7 @@ With the availability of potent enough quantum computers, all private keys of as
 Hybrid encryption systems combine the advantages of both cryptography classes, symmetric and asymmetric crypto systems. Asymmetric protocols allow securely sharing a key via digital connections, and symmetric protocols are about $10^5 \times$ faster than asymmetric ones. The secret session key \textit{SK}, whose validity is limited in time, is shared via asymmetric cryptography, and the message itself is symmetrically encrypted with the securely shared session key \textit{SK}. Hybrid cryptosystems are used in all major crypto protocols: TLS, SSH and PGP. They\\
 
 \noindent
-No asymmetric encryption within hybrid encryption systems can outbalance weaknesses of the symmetric part. ISO currently makes it possible to standardize new symmetric cryptography algorithms and to amend existing ones. Therefore, we strive to establish \textsc{eAES} as an ISO-Standard. Its predecessor \textsc{AES} has been standardized by both organizations. \\
+No asymmetric encryption within hybrid encryption systems can outbalance weaknesses of the symmetric part. ISO currently makes it possible to standardize new symmetric cryptography algorithms and to amend existing ones. \\
 
 \begin{figurehere}
   \centering
