@@ -5,7 +5,7 @@ We chose the [Computeralgebra System Singular](https://www.singular.uni-kl.de/) 
 
 ## Polynomials of the AES S-Box
 
-First we created a Singular compatible notation of the 39 Boolean quadratic polynomials for the AES S-Box can be found in the 8 Appendix of original paper: [Boolean quadratic polynomials of the AES S-Box for Singular](AES_polys_Chen_Gao_vars.txt)
+First we created a Singular compatible notation of the 39 Boolean quadratic polynomials for the AES S-Box can be found in the 8 Appendix of original paper: [Boolean quadratic polynomials of the AES S-Box for Singular](AES_polys_Chen_Gao_vars)
 
 
 
@@ -22,7 +22,7 @@ x(7)*x(5)+x(6)*x(5)+x(7)*x(3)+x(6)*x(3)+x(4)*x(2)+x(7)*x(1)+x(6)*x(1)+x(5)*x(1)+
 * *complex* stands for complex coefficients, 
 * *x(7..0)* for the variables x_7, ..., x_0 
 * *y(7..0)* for the variables y_7, ..., y_0 
-* *dp* stands for degree lexicographical ordering
+* *dp* stands for degree lexicographical ordering (x_7 > ... x_0 > y_7 > ... > y_0 > 1)
 
 So we are working in the polynomial ring with 16 variables over the complex numbers and the degree lexicographical ordering.
 
