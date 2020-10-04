@@ -3,13 +3,13 @@
 We chose the [Computeralgebra System Singular](https://www.singular.uni-kl.de/) for our first tests to create the Macaulay matrix for the QAA on AES. 
 
 
-#### Polynomials of the AES S-Box
+## Polynomials of the AES S-Box
 
 First we created a Singular compatible notation of the 37 Boolean quadratic polynomials for the AES S-Box can be found in the 8 Appendix of original paper: [Boolean quadratic polynomials of the AES S-Box for Singular](AES_polys_Chen_Gao_vars.txt)
 
 
 
-### Ring Declaration
+## Ring Declaration
 
 We identified the ring declaration in Singular corresponding to the monomial ordering of the Boolean quadratic polynomials in the original paper by testing the monomial ordering of the polynomial f_1(x_7,...,y_0):
 
@@ -39,7 +39,7 @@ x(0)*x(2)+x(1)*x(2)+x(0)*x(3)+x(1)*x(3)+x(2)*x(4)+x(1)*x(5)+x(1)*x(6)+x(3)*x(6)+
 
 
 
-### Macaulay matrix
+## Macaulay matrix
 
 Y.-A.Chen, X.-S.Gao  describe in their original paper (https://arxiv.org/abs/1712.06239}, 2018) how the matrix is created from a BMQ of a chosen cryptosystem. 
 
@@ -49,7 +49,7 @@ Y.-A.Chen, X.-S.Gao  describe in their original paper (https://arxiv.org/abs/171
 Check out the online version of the [Computeralgebra System Singular](https://www.singular.uni-kl.de:8003/) to verify our steps:
 
 
-![](AES_S-Box_ring_vars_singular.png)
+![](pics/AES_S-Box_ring_vars_singular.png)
 
 
 
