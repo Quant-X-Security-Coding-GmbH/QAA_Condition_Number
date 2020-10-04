@@ -1,0 +1,61 @@
+
+BMQ AES polynomials
+...................
+
+Procedure from library `QAA_condition_nr.lib' (*note qaa_condiion_nr_lib::*).
+/* tbd!!! QAA doesn't exist yet */
+/* we will focus on the concrete example AES for now */
+
+
+*Usage:*
+     condition_number(list poly_list); 
+/* tbd. actually we have a set of polynomials */
+
+
+*Assume:*
+    poly_list = list of polynomials of a BMQ derived from a chosen cryptosystem (AES for now)
+
+*Compute:*
+     the condition number /kappa of its respective Macaulay matrix (as defined in the paper of https://arxiv.org/pdf/1712.06239.pdf)
+
+     
+*Return:*
+     the test ideal of the ring A = basering/i 
+
+*Note:*
+     V(j) contains Sing(i) 
+
+
+*Example:*
+     LIB "normalint.lib";
+     ring  r = integer,(u,v,w),dp;
+     ideal i = u3-v2;
+     ideal j = testideal(i);
+     j; 
+     ==> j[1]=v
+     ==> j[2]=u
+     LIB "reslipman.lib";
+//--- V(j) contains Sing(i):
+     singid(i);
+     ==>_[1]=v
+     ==>_[2]=u
+     ideal I = -uv+3w,3vw2+4uw+u,v2w+4w+1;
+     testideal(I);
+     ==>_[1]=3
+     ==>_[2]=w+1
+     ==>_[3]=v
+     ==>_[4]=u
+     singid(I);
+     ==>_[1]=3
+     ==>_[2]=w+1
+     ==>_[3]=v
+     ==>_[4]=u
+
+
+* Menu:
+     
+
+     
+     
+
+
