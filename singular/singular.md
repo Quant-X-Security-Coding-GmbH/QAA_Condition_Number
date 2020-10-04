@@ -22,7 +22,9 @@ x(7)*x(5)+x(6)*x(5)+x(7)*x(3)+x(6)*x(3)+x(4)*x(2)+x(7)*x(1)+x(6)*x(1)+x(5)*x(1)+
 * *complex* stands for complex coefficients, 
 * *x(7..0)* for the variables x_7, ..., x_0 
 * *y(7..0)* for the variables y_7, ..., y_0 
-* *dp* stands for degree lexicographical ordering (x_7 > ... x_0 > y_7 > ... > y_0 > 1)
+* *dp* stands for degree reverse lexicographical ordering 
+
+(Monomial ordering is according to the original paper with variable index ordering x_7 > ... x_0 > y_7 > ... > y_0 > 1)
 
 So we are working in the polynomial ring with 16 variables over the complex numbers and the degree lexicographical ordering.
 
