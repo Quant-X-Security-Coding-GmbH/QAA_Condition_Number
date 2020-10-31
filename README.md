@@ -67,7 +67,7 @@ Furthermore it is associated to the DMV ([Deutsche Mathematikervereinigung](http
 
 ### CAR Article Autumn 2020
 
-We have published a summary of the identified impacts of the QAA in the magazine of the Computeralgebra Professionals Group Germany under th title *"Quantum Algebraic Attack"*. Our goal is to raise interest in Quantum Computing research in the Computeralgebra community as well as in the industry. the online version of it will be published in Spring 2021.
+We have published a summary of the identified impacts of the QAA in the magazine of the Computeralgebra Professionals Group Germany under the title *"Quantum Algebraic Attack"*. Our goal is to raise interest in Quantum Computing research in the Computeralgebra community as well as in the industry. The online version of it will be published in Spring 2021.
 
 See our preprint: [CAR article (Computeralgebra Rundbrief October 2020)](computeralgebra/GameChangerComputerAlgebra.pdf).
 
