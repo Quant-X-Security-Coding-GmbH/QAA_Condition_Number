@@ -18,32 +18,6 @@ by Y.-A.Chen, X.-S.Gao, https://arxiv.org/pdf/1712.06239.pdf, 2018.
 * [Slides in German](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description_DE.pdf)
 
 
-## Context Computeralgebra
-
-Computeralgebra is the scientific area which concerns itself with non-numerical mathematical algorithms and their implementations.
-Therefore it is the means which materializes mathematical theory into applicable algorithms and programs. 
-Cryptography is just one of other many topics which is handled by Computeralgebra researchers.
-
-
-### Computeralgebra Professionals Group Germany
-
-The Computeralgebra Professionals Group Germany ([Fachgruppe Computeralgebra](https://fachgruppe-computeralgebra.de/fachgruppe/)) is a group of the GI ([Gesellschaft für Informatik](https://gi.de/)). 
-Furthermore it is associated to the DMV ([Deutsche Mathematikervereinigung](https://www.mathematik.de/)).
-
-
-### CAR Article Autumn 2020
-
-We have published a summary of the identified impacts of the QAA in the magazine of the Computeralgebra Professionals Group Germany under th title *"Quantum Algebraic Attack"*. Our goal is to raise interest in Quantum Computing research in the Computeralgebra community as well as in the industry. the online version of it will be published in Spring 2021.
-
-See our preprint: [CAR article (Computeralgebra Rundbrief October 2020)](computeralgebra/GameChangerComputerAlgebra.pdf).
-
-
-### Singular Experiments
-
-Check out [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
-
-
-
 ## Progress
 
 * In a first phase, we looked at the cassical notion of a condition number of the QAA on the globally used symmetric Advanced Encryption Standard AES. Under these assumptions, the condition number of the QAA on AES equals infinity. 
@@ -76,6 +50,31 @@ This special property of the QAA offers a serious advantage over other cryptanal
 
 * The condition number of the Macaulay matrix of the BMQ for AES equals the condition number of the Macaulay matrix derived from the AES S-Box.
 * The classical condition number of the Macaulay matrix of the S-Box equals infinity
+
+
+## Context Computeralgebra
+
+Computeralgebra is the scientific area which concerns itself with non-numerical mathematical algorithms and their implementations.
+Therefore it is the means which materializes mathematical theory into applicable algorithms and programs. 
+Cryptography is just one of other many topics which is handled by Computeralgebra researchers.
+
+
+### Computeralgebra Professionals Group Germany
+
+The Computeralgebra Professionals Group Germany ([Fachgruppe Computeralgebra](https://fachgruppe-computeralgebra.de/fachgruppe/)) is a group of the GI ([Gesellschaft für Informatik](https://gi.de/)). 
+Furthermore it is associated to the DMV ([Deutsche Mathematikervereinigung](https://www.mathematik.de/)).
+
+
+### CAR Article Autumn 2020
+
+We have published a summary of the identified impacts of the QAA in the magazine of the Computeralgebra Professionals Group Germany under th title *"Quantum Algebraic Attack"*. Our goal is to raise interest in Quantum Computing research in the Computeralgebra community as well as in the industry. the online version of it will be published in Spring 2021.
+
+See our preprint: [CAR article (Computeralgebra Rundbrief October 2020)](computeralgebra/GameChangerComputerAlgebra.pdf).
+
+
+### Singular Experiments
+
+Check out [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
 
 
 
