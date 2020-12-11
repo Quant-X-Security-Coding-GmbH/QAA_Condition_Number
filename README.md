@@ -35,7 +35,7 @@ Check out [singular.md](singular/singular.md) to follow our experiments with the
   The 3 main killer Q-algos, search, factoring and simulation, are all on the same structural footing :
   the quantum singular value transformation algorithm by Gilyen et al.:
   https://arxiv.org/pdf/1806.01838.pdf
-  Remark : The QAA is not mentioned , but probably Chen-Gao built on this universal algorithms, too.
+  Remark : The QAA is not mentioned , but probably Chen-Gao built on this universal algorithm , too.
 
 #### Facts about the QAA on AES
 
