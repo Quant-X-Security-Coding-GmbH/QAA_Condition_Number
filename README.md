@@ -32,7 +32,10 @@ Check out [singular.md](singular/singular.md) to follow our experiments with the
 
 * Important Lecture by I. Chuang on "Grand Unification of Quantum Algorithms" with the goal of enabling the construction of
   new Quantum Algorithms ( 2020 ) : https://www.youtube.com/watch?v=GFRojXdrVXI&t=44s
-  Remark : The QAA is not mentioned .
+  The 3 main killer Q-algos, search, factoring and simulation, are all on the same structural footing :
+  the quantum singular value transformation algorithm by Gilyen et al.:
+  https://arxiv.org/pdf/1806.01838.pdf
+  Remark : The QAA is not mentioned , but probably Chen-Gao built on this universal algorithms, too.
 
 #### Facts about the QAA on AES
 
