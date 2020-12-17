@@ -30,6 +30,8 @@ Check out [singular.md](singular/singular.md) to follow our experiments with the
 
 * The QAA on cryptosystems is based on solving Boolean Multivariate Equation System (BMQ). 
 
+### Interlude : Important Progress in Quantum Algorithm design
+
 * Important Lecture by I. Chuang on "Grand Unification of Quantum Algorithms" with the goal of enabling the construction of
   new Quantum Algorithms ( 2020 ) : https://www.youtube.com/watch?v=GFRojXdrVXI&t=44s
   The 3 main killer Q-algos, search, factoring and simulation, are all on the same structural footing :
