@@ -28,55 +28,9 @@ Check out [singular.md](singular/singular.md) to follow our experiments with the
 
 ### Facts about the QAA
 
-* The QAA on cryptosystems is based on solving Boolean Multivariate Equation System (BMQ). 
-
-### Interlude : Important Progress in Quantum Algorithm design
-
-* Important Lecture by I. Chuang on "Grand Unification of Quantum Algorithms" with the goal of enabling the construction of
-  new Quantum Algorithms ( 2020 ) : https://www.youtube.com/watch?v=GFRojXdrVXI&t=44s
-  The 3 main killer Q-algos, search, factoring and simulation, are all on the same structural footing :
-  the quantum singular value transformation algorithm by Gilyen et al.:
-  https://arxiv.org/pdf/1806.01838.pdf
-  Remark : The QAA is not mentioned , but probably Chen-Gao built on this universal algorithm , too.
-  
-####  Dirac-Ket-Notation and Matrix-Algebra
+* The QAA on cryptosystems is based on solving Boolean Multivariate Equation System (BMQ).
 
 
-                                                                             
-Consider the 1-qubit space C^2 : A typical element is a 2-column vector  v = ( z1 , z2 )^T       
-                                                                            
-, z_i are complex numbers, T denotes the Transpose ( I shall write a Latex file at some stage, to avoid
-this clumsy notation here ! )
-
-In Dirac notation this written  v = |v>  =  a ket-state.
-The DUAL SPACE  (C^2)* is defined as the vector space of linear forms  f : C^2 --> C .
-In Dirac notation this is written  f = <v| =  a bra-state.
-
-The linear forms can be identified with 2-row vectors :                 <v|  = ( z1* , z2* ),
-where z_i* = the complex-conjugate ( z_i ) .
-
-
-The Dirac operations <a|b> , <a|b|c> etc. are defined by various MATRIX MULTIPLICATIONS.
-
-A matrix A has a TYPE (n,m) = ( # of rows , # of columns ).
-Then the type of a product A.B is defined as :    (n,m) . (m,p)  =  (n,p)
-
-So <u|v> is the scalar product : <u| = 2-row vector with type : (1,2)   multiplied with
-                                 |v> = 2-column vector with type : (2,1),
-                                 
-                                 and <u|v> has type (1,2).(2,1) = (1,1) = scalar = complex number.
-                                 
-                                 
-<u|A|v> is a triple product with u,v as above and A is a (2,2)-matrix = 1 qubit gate.
-
-The types are : (1,2).(2,2).(2,1) = (1,2).(2,1) = (1,1) = scalar,
-where the matrix product is associative, but not commutative in general.
-
-I will soon write more about the physical meaning of both types of product.                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                                                                                                                                                                                                                                        
 #### Facts about the QAA on AES
 
 The key length and the number of rounds only have only minor impact on the complexity of the attack. (See N_k and N_r in Proposition 6.1 section 6.1 of the Cen-Gao paper)
@@ -123,6 +77,16 @@ See our preprint: [CAR article (Computeralgebra Rundbrief October 2020)](compute
 Check out [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
 
 
+### Interlude: Important Progress in Quantum Algorithm Design
+
+Important Lecture by I. Chuang on "Grand Unification of Quantum Algorithms" with the goal of enabling the construction of new Quantum Algorithms ( 2020 ): https://www.youtube.com/watch?v=GFRojXdrVXI&t=44s
+
+The 3 main killer Q-algos, search, factoring and simulation, are all on the same structural footing: The quantum singular value transformation algorithm by Gilyen et al.: https://arxiv.org/pdf/1806.01838.pdf
+
+Remark: The QAA is not mentioned, but probably Chen-Gao built on this universal algorithm, too.
+
+Check out [notation.md](notation/notation.md) 
+
 
 ## Cross References
 
@@ -133,6 +97,7 @@ https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/official_paper/QAA
 
 
 ## Contributers
+
 * [Dr. Peter Nonnenmann](https://www.linkedin.com/in/peter-dr-nonnenmann-737857a0/): Core Analysis, see [his original paper](https://github.com/XeniaGabriela/QAA_Condition_Nr/tree/master/results_nonnenmann_rump)
 * [Xenia Bogomolec](https://www.linkedin.com/in/xenia-bogomolec-532981a6/): Context analysis wrt. Commutative Algebra, Algebraic Geometry, Cryptography and Industry
 
