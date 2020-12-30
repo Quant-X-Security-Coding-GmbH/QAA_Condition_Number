@@ -40,13 +40,17 @@ Check out [singular.md](singular/singular.md) to follow our experiments with the
   Remark : The QAA is not mentioned , but probably Chen-Gao built on this universal algorithm , too.
   
 ####  Dirac-Ket-Notation and Matrix-Algebra
+
+
                                                                              z1
-Consider the 1-qubit space C^2 : A typical element is a 2-column vector  v =          , z_i complex numbers
+Consider the 1-qubit space C^2 : A typical element is a 2-column vector  v =        
                                                                              z2
+
+
+
+, z_i are complex numbers.
 In Dirac notation this written  v = |v>  =  a ket-state.
-
 The DUAL SPACE  (C^2)* is defined as the vector space of linear forms  f : C^2 --> C .
-
 In Dirac notation this is written  f = <v| =  a bra-state.
 
 The linear forms can be identified with 2-row vectors :                 <v|  = ( z1* , z2* ),
