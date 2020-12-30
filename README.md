@@ -38,6 +38,37 @@ Check out [singular.md](singular/singular.md) to follow our experiments with the
   the quantum singular value transformation algorithm by Gilyen et al.:
   https://arxiv.org/pdf/1806.01838.pdf
   Remark : The QAA is not mentioned , but probably Chen-Gao built on this universal algorithm , too.
+  
+####  Dirac-Ket-Notation and Matrix-Algebra
+                                                                             z1
+Consider the 1-qubit space C^2 : A typical element is a 2-column vector  v =          , z_i complex numbers
+                                                                             z2
+In Dirac notation this written  v = |v>  =  a ket-state.
+
+The DUAL SPACE  (C^2)* is defined as the vector space of linear forms  f : C^2 --> C .
+
+In Dirac notation this is written  f = <v| =  a bra-state.
+
+The linear forms can be identified with 2-row vectors :                 <v|  = ( z1* , z2* ),
+where z_i* = the complex-conjugate ( z_i ) .
+
+
+The Dirac operations <a|b> , <a|b|c> etc. are defined by various MATRIX MULTIPLICATIONS.
+
+
+
+
+
+
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+
 
 #### Facts about the QAA on AES
 
