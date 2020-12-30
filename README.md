@@ -42,13 +42,10 @@ Check out [singular.md](singular/singular.md) to follow our experiments with the
 ####  Dirac-Ket-Notation and Matrix-Algebra
 
 
-                                                                             z1
-Consider the 1-qubit space C^2 : A typical element is a 2-column vector  v =        
-                                                                             z2
-
-
-
-, z_i are complex numbers.
+                                                                             
+Consider the 1-qubit space C^2 : A typical element is a 2-column vector  v = ( z1 , z2 )^T       
+                                                                            
+, z_i are complex numbers, T denotes the Transpose .
 In Dirac notation this written  v = |v>  =  a ket-state.
 The DUAL SPACE  (C^2)* is defined as the vector space of linear forms  f : C^2 --> C .
 In Dirac notation this is written  f = <v| =  a bra-state.
