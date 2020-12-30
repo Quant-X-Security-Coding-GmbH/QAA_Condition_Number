@@ -45,7 +45,9 @@ Check out [singular.md](singular/singular.md) to follow our experiments with the
                                                                              
 Consider the 1-qubit space C^2 : A typical element is a 2-column vector  v = ( z1 , z2 )^T       
                                                                             
-, z_i are complex numbers, T denotes the Transpose .
+, z_i are complex numbers, T denotes the Transpose ( I shall write a Latex file at some stage, to avoid
+this clumsy notation here ! )
+
 In Dirac notation this written  v = |v>  =  a ket-state.
 The DUAL SPACE  (C^2)* is defined as the vector space of linear forms  f : C^2 --> C .
 In Dirac notation this is written  f = <v| =  a bra-state.
@@ -56,21 +58,25 @@ where z_i* = the complex-conjugate ( z_i ) .
 
 The Dirac operations <a|b> , <a|b|c> etc. are defined by various MATRIX MULTIPLICATIONS.
 
+A matrix A has a TYPE (n,m) = ( # of rows , # of columns ).
+Then the type of a product A.B is defined as :    (n,m) . (m,p)  =  (n,p)
 
+So <u|v> is the scalar product : <u| = 2-row vector with type : (1,2)   multiplied with
+                                 |v> = 2-column vector with type : (2,1),
+                                 
+                                 and <u|v> has type (1,2).(2,1) = (1,1) = scalar = complex number.
+                                 
+                                 
+<u|A|v> is a triple product with u,v as above and A is a (2,2)-matrix = 1 qubit gate.
 
+The types are : (1,2).(2,2).(2,1) = (1,2).(2,1) = (1,1) = scalar,
+where the matrix product is associative, but not commutative in general.
 
-
-
+I will soon write more about the physical meaning of both types of product.                                                                             
                                                                              
                                                                              
                                                                              
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-
-
+                                                                                                                                                                                                                                                                                        
 #### Facts about the QAA on AES
 
 The key length and the number of rounds only have only minor impact on the complexity of the attack. (See N_k and N_r in Proposition 6.1 section 6.1 of the Cen-Gao paper)
