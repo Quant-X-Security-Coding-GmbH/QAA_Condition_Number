@@ -77,7 +77,7 @@ See our preprint: [CAR article (Computeralgebra Rundbrief October 2020)](compute
 Check out [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
 
 
-### Interlude: Important Progress in Quantum Algorithm Design
+## Interlude: Important Progress in Quantum Algorithm Design
 
 Important Lecture by I. Chuang on "Grand Unification of Quantum Algorithms" with the goal of enabling the construction of new Quantum Algorithms ( 2020 ): https://www.youtube.com/watch?v=GFRojXdrVXI&t=44s
 
