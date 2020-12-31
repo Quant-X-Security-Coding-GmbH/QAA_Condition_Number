@@ -53,7 +53,7 @@ OBSERVABLES are modelled by Hermitian operators or matrices A , that are defined
 
 < u | A | v >  =  < Au | v >   for all  u,v .
 
-From this follows that  < v | A | v > =: <A>_v   is a real number for all  v.
+From this follows that  < v | A | v > =: E(A,v)   is a real number for all  v.
 
-There is an Axiom in Quantum Theory, that <A>_v is the EXPECTED VALUE of observing A repeatedly on the same state v .      
+There is an Axiom in Quantum Theory, that E(A,v) is the EXPECTED VALUE of observing A repeatedly on the same state v .      
   
