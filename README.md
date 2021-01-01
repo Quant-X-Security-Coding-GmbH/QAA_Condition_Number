@@ -111,7 +111,11 @@ S (m,n) is diagonal, S=diag(s1,...,sp) , the s_i are the singular values , p := 
               The columnvectors (u_r+1,...,u_m) of U are an orthonormal basis of Ker(A^T),
               which can be calculated by calling the Algorithm.BASIS-OF-KERNEL below.
 END.SVD              
-   
+
+## Killer App Google's PageRank Algorithm
+
+As a major application of Matrix Factorizations / Diagonalization , check out this: https://projecteuclid.org/download/pdf_1/euclid.im/1109190965
+
 ## Cross References
 
 * eAES mathematical analysis wrt. Grover's Search by Xenia Bogomolec: ([eAES_post-quantum_math_analysis](https://github.com/XeniaGabriela/eAES_post-quantum_math_analysis))
