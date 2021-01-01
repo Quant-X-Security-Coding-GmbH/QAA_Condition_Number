@@ -115,6 +115,7 @@ END.SVD
 ## Killer App Google's PageRank Algorithm
 
 As a major application of Matrix Factorizations / Diagonalization , check out this: https://projecteuclid.org/download/pdf_1/euclid.im/1109190965
+See also on Github XeniaGabriela/dwave .
 
 ## Cross References
 
