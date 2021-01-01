@@ -102,7 +102,9 @@ S (m,n) is diagonal, S=diag(s1,...,sp) , the s_i are the singular values , p := 
    r is equal to the number of non-zero singular values.
 3. Calculate an orthonormal Eigenbasis of A^T.A , ( v1,...,vn ) .
    The latter is equal to V = ( v1,...,vn ), the v_i are the columns of V .
-4. As for U : FOR  i = 1 to r  DO
+4. As for U :
+
+              FOR  i = 1 to r  DO
               u_i := (1/s_i) Av_i 
    
               FOR  i = r+1 to m  DO
