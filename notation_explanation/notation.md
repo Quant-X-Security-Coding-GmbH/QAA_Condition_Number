@@ -5,7 +5,7 @@
 * Bra: < a |  ==> a row vector
 * Ket: | b >  ==> a column vector
 * < a | b > is the scalar product of a and b, a complex number
-* | b >  < a | is a matrix ([see this example](https://www.matheretter.de/wiki/spaltenvektor-mal-zeilenvektor))
+* | b >  < a | is a matrix (also called dyadic product, [see this example](https://www.matheretter.de/wiki/spaltenvektor-mal-zeilenvektor))
 *  |a> |b> := |a> tensor |b>  :=  |a b>  is the tensor product of two vectors or matrices (see here: https://en.wikipedia.org/wiki/Kronecker_product)
 
 ##  Dirac-Ket-Notation and Matrix-Algebra
