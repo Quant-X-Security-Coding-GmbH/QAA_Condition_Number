@@ -87,10 +87,29 @@ Remark: The QAA is not mentioned, but probably Chen-Gao built on this universal 
 
 Check out [notation.md](notation/notation.md) 
 
-## SVD-Algorithm for starting experiments on SVD calculations
+## SVD-Algorithm for starting experiments on SVD calculations ( Singular Value Decomposition )
 
-TBD
+Algorithm.SVD
 
+Input: (m,n)-Matrix A
+Output: SVD  A = U.S.V^T  ,
+where U (m,m) consists of the left, and V (n,n) of the right singular vectors, and
+S (m,n) is diagonal, S=diag(s1,...,sp) , the s_i are the singular values , p := min(m,n), r is the rank of A .
+
+1. If m > n , calculate A^T.A , Else , calculate A.A^T .
+2. Let m > n , calculate the eigenvalues la_i of the hermitian matrix A^T.A .
+   The singular values s_i are the square roots( la_i ) .
+   r is equal to the number of non-zero singular values.
+3. Calculate an orthonormal Eigenbasis of A^T.A , ( v1,...,vn ) .
+   The latter is equal to V = ( v1,...,vn ), the v_i are the columns of V .
+4. As for U : FOR  i = 1 to r  DO
+              u_i := (1/s_i) Av_i 
+   
+              FOR  i = r+1 to m  DO
+              The columnvectors (u_r+1,...,u_m) of U are an orthonormal basis of Ker(A^T),
+              which can be calculated by calling the Algorithm.BASIS-OF-KERNEL below.
+END.SVD              
+   
 ## Cross References
 
 * eAES mathematical analysis wrt. Grover's Search by Xenia Bogomolec: ([eAES_post-quantum_math_analysis](https://github.com/XeniaGabriela/eAES_post-quantum_math_analysis))
