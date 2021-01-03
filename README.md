@@ -46,7 +46,10 @@ Furthermore:
 * The condition number of the Macaulay matrix of the BMQ for AES equals the condition number of the Macaulay matrix derived from the AES S-Box.
 * The classical condition number of the Macaulay matrix of the S-Box equals infinity.
 
-This special properties of the QAA offers a serious advantage over other cryptanalyses, such as Grover's Search algorithm. It also defines new criteria for post-quantum cryptography. A cryptosystem offering resilience against the QAA must satisfy at least one of he following criteria:
+
+### Cryptoanalytic Gamechanger QAA
+
+The special properties described in the previous section of the QAA offers a serious advantage over other cryptanalyses, such as Grover's Search algorithm. It also defines new criteria for post-quantum cryptography. A cryptosystem offering resilience against the QAA must satisfy at least one of he following criteria:
 
 1) It cannot be reduced to a BMQ
 2) If it can be reduced to a BMQ, its QAA Macaulay matrix must have a large condition nummer /kappa.
