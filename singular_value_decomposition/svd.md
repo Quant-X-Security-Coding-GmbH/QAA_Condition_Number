@@ -3,7 +3,6 @@
 SVD can be performed on **any** matrix. There are binary implementations and quantum algorithm papers for SVD. We need the SVD to compute the condition number \kappa of the reduced Macaulay matrices of the chosen cryptosystems. With \kappa, we can then compute the security levels of the cryptosystems wrt. the Quantum Algebraic Attack.
 
 
-
 ## SVD-Algorithm (Singular Value Decomposition)
 
 For starting experiments on SVD calculations. In pseudo code:
@@ -13,15 +12,15 @@ Algorithm.SVD
 Input: (m,n)-Matrix A
 Output: SVD  A = U.S.V^T  ,
 where U (m,m) consists of the left, and V (n,n) of the right singular vectors, and
-S (m,n) is diagonal, S=diag(s1,...,sp) , the s_i are the singular values , p := min(m,n), r is the rank of A .
+S (m,n) is diagonal, S=diag(s1,...,sp), the s_i are the singular values, p := min(m,n), r is the rank of A.
 
-1. If m > n , calculate A^T.A , Else , calculate A.A^T .
-2. Let m > n , calculate the eigenvalues la_i of the hermitian matrix A^T.A .
+1. If m > n, calculate A^T.A, Else, calculate A.A^T .
+2. Let m > n, calculate the eigenvalues la_i of the hermitian matrix A^T.A .
    The singular values s_i are the square roots( la_i ) .
    r is equal to the number of non-zero singular values.
 3. Calculate an orthonormal Eigenbasis of A^T.A , ( v1,...,vn ) .
    The latter is equal to V = ( v1,...,vn ), the v_i are the columns of V .
-4. As for U :
+4. As for U:
 
               FOR  i = 1 to r  DO
               u_i := (1/s_i) Av_i 
@@ -59,4 +58,4 @@ plays a central role. Its condition number is known:
 Brin & Page's original choice was  alpha = 0.85,
 alpha = 1  gives
 
-     k ( I -   1 .P' )  =  2 / 0  =  infinity.
+     k ( I - 1 .P' )  =  2 / 0  =  infinity.
