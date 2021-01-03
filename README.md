@@ -90,24 +90,6 @@ The 3 main killer Q-algos, search, factoring and simulation, are all on the same
 Check out [notation.md](notation/notation.md) for mathematical and quantum notation of the described mechanisms and operations.
 
 
-The typical size of the matrix in Google's PageRank Algorithm is 4.3 billion by 4.3 billion, and they are willing to do
-a few hundred iterations.
-
-In the linear systems formulation, as opposed to the original Markov chain treatmen of Brin & Page, the matrix
-
-    ( I  - alpha.P' )
-    
-    where I is the identity matrix, alpha is a real parameter, and P' some matrix,
-    
-plays a central role. Its condition number is known :
-
-     k( I - alpha.P' )  =  ( 1 + alpha ) / ( 1 - alpha ).
-     
-Brin & Page's original choice was  alpha = 0.85 ,
-alpha = 1  gives
-
-     k ( I -   1 .P' )  =  2 / 0  =  infinity .
-
 
 ## Cross References
 
@@ -115,8 +97,6 @@ alpha = 1  gives
 
 For scientific references used for the computation of the condition number see the references in the ([Official Paper](
 https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/official_paper/QAA_on_AES_paper.pdf))
-
-
 
 
 
