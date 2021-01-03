@@ -44,16 +44,15 @@ where the matrix product is associative, but not commutative in general.
 
 ## Physical Meaning of both Types of Product
 
-Let |v> be the starting state of a quantum system before a measurement is done, and |u> the ending state
-after the measurement is carried out. Then | <u|v> |^2  is the probability that, starting in |v>, we end up
+Let |v> be the starting state of a quantum system before a measurement is done, and |u> the ending state after the measurement is carried out. 
+Then | <u|v> |^2  is the probability that, starting in |v>, we end up
 in |u> after the measurement.
 
-In Quantum Theory, STATES are modelled by ket-vectors in a Hilbert space, as described above.
-OBSERVABLES are modelled by Hermitian operators or matrices A , that are defined by
+In Quantum Theory, *STATES* are modelled by ket-vectors in a Hilbert space, as described above. *OBSERVABLES* are modelled by Hermitian operators or matrices A, that are defined by
 
-< u | A | v >  =  < Au | v >   for all  u,v .
+< u | A | v > = < Au | v >   for all  u,v .
 
-From this follows that  < v | A | v > =: E(A,v)   is a real number for all  v.
+From this follows that < v | A | v > =: E(A,v) is a real number for all v.
 
-There is an Axiom in Quantum Theory, that E(A,v) is the EXPECTED VALUE of observing A repeatedly on the same state v .      
+There is an Axiom in Quantum Theory, that E(A,v) is the EXPECTED VALUE of observing A repeatedly on the same state v.      
   

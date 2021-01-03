@@ -20,10 +20,12 @@ by Y.-A.Chen, X.-S.Gao, https://arxiv.org/pdf/1712.06239.pdf, 2018.
 
 ## Progress
 
-* In a first phase, we looked at the cassical notion of a condition number of the QAA on the globally used symmetric Advanced Encryption Standard AES. Under these assumptions, the condition number of the QAA on AES equals infinity. 
-* The second (current) phase is the investigation of the condition number of the Macaulay matrix while ignoring zero rows amd columns. This pahse consists of the explicit generation of the reduced Macaulay matrix of the polynomial system derived from the S-Box and the actual computation of its condition number.
+* In a first phase, we looked at the cassical notion of a condition number of the QAA on the globally used symmetric Advanced Encryption Standard AES. The classical notion of the condition number takes zero rows and columns of the matrix into account. For a complex square matrix A which commutes with its own conjugate A* , the condition number is the positive ratio of the maximal and minimal eigenvalues of A. Under these assumptions, the condition number of the QAA on AES equals infinity. 
+* The second (current) phase is the investigation of the condition number of the Macaulay matrix while ignoring zero rows amd columns. This phase consists of the explicit generation of the reduced Macaulay matrix of the polynomial system derived from the S-Box and the computation of its condition number by a singular value decomposition (SVD). SVD can be performed on **any** matrix. There are binary implementations and quantum algorithm papers for SVD.
 
-Check out [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
+Check out 
+* [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
+* [svd.md](singular_value_decomposition/svd.md) for mathematical explanation of the SVD computation.
 
 
 ### Facts about the QAA
@@ -83,39 +85,10 @@ Important Lecture by I. Chuang on "Grand Unification of Quantum Algorithms" with
 
 The 3 main killer Q-algos, search, factoring and simulation, are all on the same structural footing: The quantum singular value transformation algorithm by Gilyen et al.: https://arxiv.org/pdf/1806.01838.pdf
 
-Remark: The QAA is not mentioned, but probably Chen-Gao built on this universal algorithm, too.
+**Remark**: The QAA is not explicitely mentioned, but in the youtube video he mentions SVD in the context of the HHL algorithm, on which the QAA is built.
 
-Check out [notation.md](notation/notation.md) 
+Check out [notation.md](notation/notation.md) for mathematical and quantum notation of the described mechanisms and operations.
 
-## SVD-Algorithm for starting experiments on SVD calculations ( Singular Value Decomposition )
-
-Algorithm.SVD
-
-Input: (m,n)-Matrix A
-Output: SVD  A = U.S.V^T  ,
-where U (m,m) consists of the left, and V (n,n) of the right singular vectors, and
-S (m,n) is diagonal, S=diag(s1,...,sp) , the s_i are the singular values , p := min(m,n), r is the rank of A .
-
-1. If m > n , calculate A^T.A , Else , calculate A.A^T .
-2. Let m > n , calculate the eigenvalues la_i of the hermitian matrix A^T.A .
-   The singular values s_i are the square roots( la_i ) .
-   r is equal to the number of non-zero singular values.
-3. Calculate an orthonormal Eigenbasis of A^T.A , ( v1,...,vn ) .
-   The latter is equal to V = ( v1,...,vn ), the v_i are the columns of V .
-4. As for U :
-
-              FOR  i = 1 to r  DO
-              u_i := (1/s_i) Av_i 
-   
-              FOR  i = r+1 to m  DO
-              The columnvectors (u_r+1,...,u_m) of U are an orthonormal basis of Ker(A^T),
-              which can be calculated by calling the Algorithm.BASIS-OF-KERNEL below.
-END.SVD              
-
-## Killer App Google's PageRank Algorithm
-
-As a major application of Matrix Factorizations / Diagonalization , check out this: https://projecteuclid.org/download/pdf_1/euclid.im/1109190965
-See also on Github XeniaGabriela/dwave .
 
 ## Cross References
 
@@ -123,6 +96,9 @@ See also on Github XeniaGabriela/dwave .
 
 For scientific references used for the computation of the condition number see the references in the ([Official Paper](
 https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/official_paper/QAA_on_AES_paper.pdf))
+
+
+
 
 
 ## Contributers
