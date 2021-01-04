@@ -9,7 +9,7 @@ The condition numbers will determine the security levels of the related cryptosy
 
 ## Project 
 
-### Description Slides
+### Project Slides
 
 * [Slides in English](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description_EN.pdf)
 * [Slides in German](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description_DE.pdf)
@@ -17,39 +17,35 @@ The condition numbers will determine the security levels of the related cryptosy
 
 ### General Facts about the QAA
 
-* The **QAA** is based on the HHL algorithm and Computeralgebra.
-* The **QAA** is based on solving Boolean Multivariate Equation System (BMQ).
+* The **QAA** is based on 
+	* The HHL algorithm (Quantum Linear Algebra) 
+	* Computeralgebra means in order to solve Boolean Multivariate Equation Systems (BMQ).
+* To calculate the condition number of the cryptosystems (their security levels respectively), we will have to work with numerical means.
 
 
 ### Progress
 
-* In a first phase, we looked at the cassical notion of a condition number of the QAA on the globally used symmetric Advanced Encryption Standard AES. The classical notion of the condition number takes zero rows and columns of the matrix into account. For a complex square matrix A which commutes with its own conjugate A* , the condition number is the positive ratio of the maximal and minimal eigenvalues of A. Under these assumptions, the condition number of the QAA on AES equals infinity. 
-* The second (current) phase is the investigation of the condition number of the Macaulay matrix while ignoring zero rows amd columns. This phase consists of the explicit generation of the reduced Macaulay matrix of the polynomial system derived from the S-Box and the computation of its condition number by a singular value decomposition (SVD). SVD can be performed on **any** matrix. There are binary implementations and quantum algorithm papers for SVD.
-
-Check out 
-* [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
-* [svd.md](singular_value_decomposition/svd.md) for mathematical explanation of the SVD computation.
+1) In a first phase, we looked at the cassical notion of a condition number of the QAA on the globally used symmetric Advanced Encryption Standard AES. The classical notion of the condition number takes zero rows and columns of the specific Macaualay matrix into account. For a complex square matrix A which commutes with its own conjugate A* , the condition number is the positive ratio of the maximal and minimal eigenvalues of A. Under these assumptions, the condition number of the QAA on AES equals infinity. 
+2) The second (current) phase is the investigation of the condition number of the Macaulay matrix while ignoring zero rows amd columns. This phase consists of the explicit generation of the *reduced Macaulay matrix* of the polynomial system derived from the S-Box and the computation of its condition number by a singular value decomposition (SVD). SVD can be performed on **any** matrix. There are binary implementations and quantum algorithm papers for SVD. Some documentation on our calculations:
+	* [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
+	* [svd.md](singular_value_decomposition/svd.md) for mathematical explanation of the SVD computation.
 
 
 ### Results for AES
 
-The key length and the number of rounds only have only minor impact on the complexity of the attack. (See N_k and N_r in Proposition 6.1 section 6.1 of the Cen-Gao paper)
+1) The key length and the number of rounds have only minor impact on the complexity of the attack. (See N_k and N_r in Proposition 6.1 section 6.1 of the Cen-Gao paper)
+2) The complexity of the key schedule function has no impact on the complexity of the QAA, because:
 
-The complexity of the key schedule function has no impact on the complexity of the QAA, because:
+	a) The key and the expanded key are considered key variables in the BMQ.
+	b) The derived sub keys are considered state variables in the BMQ.
 
-* The key and the expanded key are considered as key variables in the BMQ.
-* The derived sub keys are considered as state variables in the BMQ
-
-
-Furthermore:
-
-* The condition number of the Macaulay matrix of the BMQ for AES equals the condition number of the Macaulay matrix derived from the AES S-Box.
-* The classical condition number of the Macaulay matrix of the S-Box equals infinity.
+3) The condition number of the Macaulay matrix of the BMQ for AES equals the condition number of the Macaulay matrix derived from the AES S-Box.
+4) The classical condition number of the Macaulay matrix of the S-Box equals infinity.
 
 
 ### Cryptoanalytic Gamechanger QAA
 
-The special properties described in the previous section of the QAA offers a serious advantage over other cryptanalyses, such as Grover's Search algorithm. It also defines new criteria for post-quantum cryptography. A cryptosystem offering resilience against the QAA must satisfy at least one of he following criteria:
+The properties 1. and 2. of the QAA described in the previous section offer considerable advantage over other cryptanalyses, such as Grover's Search algorithm. They also define new criteria for post-quantum cryptography. A cryptosystem offering resilience against the QAA must satisfy at least one of he following criteria:
 
 1) It cannot be reduced to a BMQ
 2) If it can be reduced to a BMQ, its QAA Macaulay matrix must have a large condition nummer /kappa.
@@ -57,8 +53,9 @@ The special properties described in the previous section of the QAA offers a ser
 
 ## Context Computeralgebra
 
-Computeralgebra is the scientific area which concerns itself with non-numerical mathematical algorithms and their implementations.
+Computeralgebra is the scientific area which concerns itself with mathematical computations without floating point numbers and their implementations. That integrates symbolic computation as well.
 Therefore it is the means which materializes mathematical theory into applicable algorithms and programs. 
+
 Cryptography is just one of other many topics which is handled by Computeralgebra researchers.
 
 
@@ -70,12 +67,14 @@ Furthermore it is associated to the DMV ([Deutsche Mathematikervereinigung](http
 
 ### CAR Article Autumn 2020
 
-We have published a summary of the identified impacts of the QAA in the magazine of the Computeralgebra Professionals Group Germany under the title *"Quantum Algebraic Attack"*. Our goal is to raise interest in Quantum Computing research in the Computeralgebra community as well as in the industry. The online version of it will be published in Spring 2021.
+We have published a summary of the identified impacts of the QAA in the magazine of the Computeralgebra Expert Group Germany under the title *"Quantum Algebraic Attack"*. 
+
+Our goal is to raise interest in Quantum Computing research in the Computeralgebra community as well as in the industry. The online version will be published in spring 2021.
 
 See our preprint: [CAR article (Computeralgebra Rundbrief October 2020)](computeralgebra/GameChangerComputerAlgebra.pdf).
 
 
-### Singular Experiments
+### Singular Experiments aorund the QAA
 
 Check out [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
 
@@ -86,7 +85,7 @@ Important Lecture by I. Chuang on "Grand Unification of Quantum Algorithms" with
 
 The 3 main killer Q-algos, search, factoring and simulation, are all on the same structural footing: The quantum singular value transformation algorithm by Gilyen et al.: https://arxiv.org/pdf/1806.01838.pdf
 
-**Remark**: The QAA is not explicitely mentioned, but in the youtube video he mentions SVD in the context of the HHL algorithm, on which the QAA is built.
+**Remark**: The QAA is not explicitely mentioned, but in the youtube video, I. Chuang  mentions SVD in the context of the HHL algorithm (on which the QAA is built).
 
 Check out [notation.md](notation/notation.md) for mathematical and quantum notation of the described mechanisms and operations.
 
@@ -96,7 +95,7 @@ Check out [notation.md](notation/notation.md) for mathematical and quantum notat
 
 * eAES mathematical analysis wrt. Grover's Search by Xenia Bogomolec: ([eAES_post-quantum_math_analysis](https://github.com/XeniaGabriela/eAES_post-quantum_math_analysis))
 
-For scientific references used for the computation of the condition number see the references in the ([Official Paper](
+For scientific references used for the calculation of the condition number /kappa see the references in the ([Official Paper](
 https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/official_paper/QAA_on_AES_paper.pdf))
 
 
