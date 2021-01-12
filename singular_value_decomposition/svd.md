@@ -10,7 +10,9 @@ For starting experiments on SVD calculations. In pseudo code:
 Algorithm.SVD
 
 Input: (m,n)-Matrix A
+
 Output: SVD  A = U.S.V^T  ,
+
 where U (m,m) consists of the left, and V (n,n) of the right singular vectors, and
 S (m,n) is diagonal, S=diag(s1,...,sp), the s_i are the singular values, p := min(m,n), r is the rank of A.
 
