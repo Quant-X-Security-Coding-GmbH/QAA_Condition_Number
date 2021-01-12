@@ -20,7 +20,7 @@ The condition numbers will determine the security levels of the related cryptosy
 * The **QAA** is based on 
 	* The HHL algorithm (Quantum Linear Algebra) 
 	* Computeralgebra means in order to solve Boolean Multivariate Equation Systems (BMQ).
-* To calculate the condition number of the cryptosystems (their security levels respectively), we will have to work with numerical means.
+* To calculate the condition number of the cryptosystems (their security levels respectively), we have to work with Computeralgebra and numerical methods.
 
 
 ### Progress
