@@ -73,7 +73,7 @@ We received some new insights from other participants of the conference: The sec
 
 * [Conference](https://fachgruppe-computeralgebra.de/industrial-computeralgebra-conference-with-focus-cryptography/)
 * [Speakers](https://fachgruppe-computeralgebra.de/industrial-conference-talks/)
-* 
+
 
 ### CAR Article Autumn 2020
 
