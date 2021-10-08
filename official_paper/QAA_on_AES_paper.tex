@@ -9,6 +9,7 @@
 \begin{document}
 \setcounter{footnote}{0}
 \setcounter{figure}{0}
+\setcounter{MaxMatrixCols}{20}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -187,7 +188,40 @@ The $4$ basic functions of the \textsc{Rijndael} encryption are: \\
   	\end{bmatrix}
   $$
 
+
 \end{itemize} 
+
+
+
+\vspace{1.0cm}
+
+\noindent Let  $ F_q $ be a finite field , where $ q = p^m $, $p$ a prime number, $ m \ge 1 $ .
+When $ m=1 $, we have $ F_p = {0,1,...,p-1} $ mod $p$ , but for $ m > 1 $ , $ F_q $ 
+cannot be embedded into Z. \\ \\
+Let $ P = { f_1,...,f_r} \subset F_q[X] $ be a set of polynomials in variables
+$ X = { x_1,...,x_n } $ , and $ \epsilon \in (0,1) $ be a (small) failure probability. \\ \\
+
+\noindent
+\textbf{Theorem} \\
+There is a quantum algorithm which decides whether $ P = 0 $ and has a solution in $ F_q^n $, 
+and computes one if this is true, with success probabilty at least $ 1 - \epsilon $ ,
+and polynomial complexity in the input size, and in the condition number $ \kappa $ of P \\ \\
+
+\noindent This Theorem is more general than the optimization problem O stated on the next slide, because the Theorem deals with finite fields $ F_q , q=p^m, m \ge 1 $ whereas the optimization algorithm only works for $ m=1 , F_p ={0,1,....,(p-1)} $, i.e. mod $p$.
+
+
+\vspace{1.0cm}
+
+\noindent
+\textbf{Theorem} \\
+For every $ T \in K(H_1,H_2) $ exist ON-Systems $ (e_i) , (f_j) $ of $ H_1 , H_2 $, respectively, and a sequence of positive real numbers
+$ (s_k) $ ,  with  $ s_1 \ge s_2 \ge \ldots \ge 0 , \,  lim \, s_k = 0 $  such that
+$ Tx = \sum s_k \langle x|e_k \rangle f_k  \in  H_2 $ for all $ x \in H_1 $ .
+
+
+
+\vspace{1.0cm}
+
 
 \vspace{0.3cm}
 \noindent
