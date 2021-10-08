@@ -12,7 +12,7 @@ The condition numbers will determine the security levels of the related cryptosy
 ### Project Slides
 
 * [Slides in English](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description_EN.pdf)
-* [Slides in German](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description_DE.pdf)
+* [Computeralgebra Conference Presentation](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/QAA_Talk%20PNo.pdf)
 
 
 ### General Facts about the QAA
@@ -29,6 +29,8 @@ The condition numbers will determine the security levels of the related cryptosy
 2) The second (current) phase is the investigation of the condition number of the Macaulay matrix while ignoring zero rows amd columns. This phase consists of the explicit generation of the *reduced Macaulay matrix* of the polynomial system derived from the S-Box and the computation of its condition number by a singular value decomposition (SVD). SVD can be performed on **any** matrix. There are binary implementations and quantum algorithm papers for SVD. Some documentation on our calculations:
 	* [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
 	* [svd.md](singular_value_decomposition/svd.md) for mathematical explanation of the SVD computation.
+
+3) By feedback from particpants of the [Industrial Computeralgebra Conference with Focus Cryptography](https://fachgruppe-computeralgebra.de/industrial-computeralgebra-conference-with-focus-cryptography/), the secruity levels can be estimated by a lower bound. See [Limitations of the Macaulay matrix approach for using the HHL algorithm to solve multivariate polynomial systems](https://indico.physik.uni-muenchen.de/event/84/attachments/248/553/S2C.Li.slides.pdf). Chen/Gao’s algorithm is exponential in the Hamming weight (number of one’s) of the solution (the secret key + the expanded key + derived sub keys). A randomly generated symmetric secret key should have about equally many zero’s as one’s. Under this assumption, the Hamming weigh of the solution is about half the size of the solution vector. The structure of the AES Macaulay matrix implies a far lower Hamming weight though. It is our next goal to compute the Hamming weight of this matrix. After this we will continue  the research about a new method to compute the condition number of the huge matrix.
 
 
 ### Results for AES
@@ -64,6 +66,14 @@ Cryptography is just one of other many topics which is handled by Computeralgebr
 The Computeralgebra Professionals Group Germany ([Fachgruppe Computeralgebra](https://fachgruppe-computeralgebra.de/fachgruppe/)) is a group of the GI ([Gesellschaft für Informatik](https://gi.de/)). 
 Furthermore it is associated to the DMV ([Deutsche Mathematikervereinigung](https://www.mathematik.de/)).
 
+
+### Industrial Computeralgebra Conference with Focus Cryptography September 2021
+
+We received some new insights from other participants of the conference: The secruity levels can be estimated by a lower bound. See [Limitations of the Macaulay matrix approach for using the HHL algorithm to solve multivariate polynomial systems](https://indico.physik.uni-muenchen.de/event/84/attachments/248/553/S2C.Li.slides.pdf). 
+
+* [Conference](https://fachgruppe-computeralgebra.de/industrial-computeralgebra-conference-with-focus-cryptography/)
+* [Speakers](https://fachgruppe-computeralgebra.de/industrial-conference-talks/)
+* 
 
 ### CAR Article Autumn 2020
 
