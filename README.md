@@ -108,7 +108,7 @@ Check out [notation.md](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Cond
 * eAES mathematical analysis wrt. Grover's Search by Xenia Bogomolec: ([eAES_post-quantum_math_analysis](https://github.com/XeniaGabriela/eAES_post-quantum_math_analysis))
 
 For scientific references used for the calculation of the condition number /kappa see the references in the ([Official Paper](
-https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Nr/blob/master/official_paper/QAA_on_AES_paper.pdf))
+https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/official_paper/QAA_on_AES_paper.pdf))
 
 
 
