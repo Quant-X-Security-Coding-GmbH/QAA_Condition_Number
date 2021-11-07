@@ -86,7 +86,7 @@ Our goal is to raise interest in Quantum Computing research in the Computeralgeb
 See our preprint: [CAR article (Computeralgebra Rundbrief October 2020)](computeralgebra/GameChangerComputerAlgebra.pdf).
 
 
-### Singular Experiments aorund the QAA
+### Singular Experiments around the QAA
 
 Check out [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
 
