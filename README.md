@@ -11,9 +11,8 @@ The condition numbers will determine the security levels of the related cryptosy
 
 ### Project Slides
 
-* [Slides in English](https://github.com/XeniaGabriela/QAA_Condition_Nr/blob/master/QAA_condition_number_project_description_EN.pdf)
+* [Slides in English](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/QAA_condition_number_project_description_EN.pdf)
 * [Computeralgebra Conference Presentation](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/QAA_Talk%20PNo.pdf)
-
 
 ### General Facts about the QAA
 
