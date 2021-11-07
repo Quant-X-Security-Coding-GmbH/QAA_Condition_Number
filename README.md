@@ -88,7 +88,7 @@ See our preprint: [CAR article (Computeralgebra Rundbrief October 2020)](compute
 
 ### Singular Experiments around the QAA
 
-Check out [singular.md](singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
+Check out [singular.md](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/computeralgebra/singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
 
 
 ## Interlude: Important Progress in Quantum Algorithm Design
