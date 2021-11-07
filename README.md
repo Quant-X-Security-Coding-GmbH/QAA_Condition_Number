@@ -114,7 +114,7 @@ https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/o
 
 ## Contributers
 
-* [Dr. Peter Nonnenmann](https://www.linkedin.com/in/peter-dr-nonnenmann-737857a0/): Core Analysis, see [his original paper](https://github.com/XeniaGabriela/QAA_Condition_Nr/tree/master/results_nonnenmann_rump)
+* [Dr. Peter Nonnenmann](https://www.linkedin.com/in/peter-dr-nonnenmann-737857a0/): Core Analysis, see [his original paper](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/tree/main/results_nonnenmann_rump)
 * [Xenia Bogomolec](https://www.linkedin.com/in/xenia-bogomolec-532981a6/): Context analysis wrt. Commutative Algebra, Algebraic Geometry, Cryptography and Industry
 
 With the friendly essential support of 
