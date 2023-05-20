@@ -91,19 +91,10 @@ See our preprint: [CAR article (Computeralgebra Rundbrief October 2020)](compute
 Check out [singular.md](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/computeralgebra/singular/singular.md) to follow our experiments with the [Computeralgebra System Singular](https://www.singular.uni-kl.de/).
 
 
-## Interlude: Important Progress in Quantum Algorithm Design
-
-Important Lecture by I. Chuang on "Grand Unification of Quantum Algorithms" with the goal of enabling the construction of new Quantum Algorithms ( 2020 ): https://www.youtube.com/watch?v=GFRojXdrVXI&t=44s
-
-The 3 main killer Q-algos, search, factoring and simulation, are all on the same structural footing: The quantum singular value transformation algorithm by Gilyen et al.: https://arxiv.org/pdf/1806.01838.pdf
-
-**Remark**: The QAA is not explicitely mentioned, but in the youtube video, I. Chuang  mentions SVD in the context of the HHL algorithm (on which the QAA is built).
-
-Check out [notation.md](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/notation_explanation/notation.md) for mathematical and quantum notation of the described mechanisms and operations.
-
-
 
 ## Cross References
+
+### Grover' Search
 
 * eAES mathematical analysis wrt. Grover's Search by Xenia Bogomolec: ([eAES_post-quantum_math_analysis](https://github.com/XeniaGabriela/eAES_post-quantum_math_analysis))
 
@@ -111,11 +102,22 @@ For scientific references used for the calculation of the condition number /kapp
 https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/official_paper/QAA_on_AES_paper.pdf))
 
 
+### Quantum Singular Value Transformation and HHL
+
+Lecture by I. Chuang on ["Grand Unification of Quantum Algorithms"](https://www.youtube.com/watch?v=GFRojXdrVXI&t=44s) with the goal of enabling the construction of new Quantum Algorithms (2020)
+
+The 3 main Quantum-algorithms, search, factoring and simulation, are all on the same structural footing, which is the the [quantum singular value transformation algorithm by Gilyen et al.](https://arxiv.org/pdf/1806.01838.pdf)
+
+**Remark**: The QAA is not explicitely addressed, but I. Chuang  mentions SVD in the context of the HHL algorithm (on which the QAA is built).
+
+Check out [notation.md](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/notation_explanation/notation.md) for mathematical and quantum notation of the described mechanisms and operations.
+
+
 
 ## Contributers
 
-* [Dr. Peter Nonnenmann](https://www.linkedin.com/in/peter-dr-nonnenmann-737857a0/): Core Analysis, see [his original paper](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/tree/main/results_nonnenmann_rump)
-* [Xenia Bogomolec](https://www.linkedin.com/in/xenia-bogomolec-532981a6/): Context analysis wrt. Commutative Algebra, Algebraic Geometry, Cryptography and Industry
+* [Xenia Bogomolec](https://www.linkedin.com/in/xenia-bogomolec-532981a6/): Context analysis wrt. Commutative Algebra, Algebraic Geometry, Cryptography and Industry, Singular examples
+* [Dr. Peter Nonnenmann](https://www.linkedin.com/in/peter-dr-nonnenmann-737857a0/): Quantum theoretical analysis, see [his original paper](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/tree/main/results_nonnenmann_rump)
 
 With the friendly essential support of 
 * Prof. Dr. Siegfried Rump (Head of the Institute for for Reliable Computing, TU Harburg)
