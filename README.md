@@ -9,6 +9,10 @@ The condition numbers will determine the security levels of the related cryptosy
 
 ## Project 
 
+### Notation
+
+Check out [notation.md](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/notation_explanation/notation.md) for mathematical and quantum notation of the described mechanisms and operations.
+
 ### Project Slides
 
 * [Slides in English](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/QAA_condition_number_project_description_EN.pdf)
@@ -94,9 +98,8 @@ Check out [singular.md](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Cond
 
 ## Cross References
 
-### Grover' Search
 
-* eAES mathematical analysis wrt. Grover's Search by Xenia Bogomolec: ([eAES_post-quantum_math_analysis](https://github.com/XeniaGabriela/eAES_post-quantum_math_analysis))
+### Condition Number
 
 For scientific references used for the calculation of the condition number /kappa see the references in the ([Official Paper](
 https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/official_paper/QAA_on_AES_paper.pdf))
@@ -106,12 +109,12 @@ https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/o
 
 Lecture by I. Chuang on ["Grand Unification of Quantum Algorithms"](https://www.youtube.com/watch?v=GFRojXdrVXI&t=44s) with the goal of enabling the construction of new Quantum Algorithms (2020)
 
-The 3 main Quantum-algorithms, search, factoring and simulation, are all on the same structural footing, which is the the [quantum singular value transformation algorithm by Gilyen et al.](https://arxiv.org/pdf/1806.01838.pdf)
+The 3 main Quantum-algorithms, search, factoring and simulation, are all on the same structural footing, which is the the [quantum singular value transformation algorithm by Gilyen et al.](https://arxiv.org/pdf/1806.01838.pdf) The QAA is not explicitely addressed, but I. Chuang  mentions SVD in the context of the HHL algorithm (on which the QAA is built).
 
-**Remark**: The QAA is not explicitely addressed, but I. Chuang  mentions SVD in the context of the HHL algorithm (on which the QAA is built).
 
-Check out [notation.md](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Condition_Number/blob/main/notation_explanation/notation.md) for mathematical and quantum notation of the described mechanisms and operations.
+### Grover's Search
 
+eAES mathematical analysis wrt. Grover's Search by Xenia Bogomolec: ([eAES_post-quantum_math_analysis](https://github.com/XeniaGabriela/eAES_post-quantum_math_analysis))
 
 
 ## Contributers
