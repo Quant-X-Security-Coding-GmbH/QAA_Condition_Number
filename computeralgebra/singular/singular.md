@@ -47,7 +47,12 @@ and the output is
 x(7)*x(5)+x(6)*x(5)+x(7)*x(3)+x(6)*x(3)+x(4)*x(2)+x(7)*x(1)+x(6)*x(1)+x(5)*x(1)+x(3)*x(1)+x(2)*x(1)+x(7)*x(0)+x(3)*x(0)+x(2)*x(0)+x(6)*y(7)+x(7)*y(6)+x(6)*y(6)+x(7)*y(5)+x(5)*y(5)+x(7)*y(4)+x(1)*y(4)+x(2)*y(3)+x(0)*y(3)+x(6)*y(2)+x(4)*y(2)+x(3)*y(2)+x(0)*y(2)+x(4)*y(0)+x(2)*y(0)+x(7)+x(5)+x(3)+y(7)+y(2)+y(0)+1
 ```
 
-The descending order of variable indexes lead to an order of monomials in the polynomial *f_1* which matched the corresponding polynomial in the original paper (ignoring the order of factors in monomials). So they are working in the polynomial ring with 16 variables over the complex numbers and **the degree reverse lexicographical ordering**.
+The descending order of variable indexes lead to an order of monomials in the polynomial *f_1* which matches the corresponding polynomial in the original paper (ignoring the order of factors in monomials). So they are working in the polynomial ring with 16 variables over the complex numbers and **the degree reverse lexicographical ordering**.
+
+With a consdieration of the polynomial from the left to the right we see that the lead monomial is the quadratic monomial with the highest index in *x* and the highest index sum followed by the quadratic monomial in *x* with the second highest index sum. However, `x(4)*x(2)` > `x(7)*x(1)` but `x(4)*x(2)`  has a lower index sum than `x(7)*x(1)`. So, we realize that the **degree reverse lexicographical ordering** is defined from the right to the left: 
+
+1. The degree of a monomial has the highest impact on the order of a monomial (1 with degree 0 is smaller than any monomial of degree 1, which are smaller than any monomials of degree 2)
+2. Within the first ordered groups of monomials with the same degree, the index of the lowest variable determines the order, e. g. y(0) < y(2), y(7) < x(3) < x(7), `x(6)*y(2)` < `x(0)*y(3)` and `x(7)*x(1)` < `x(4)*x(2)`. 
 
 
 ### Degree Reverse Lexicographical Ordering with Ascending Indexes
@@ -63,8 +68,9 @@ poly f_1=x(5)*x(7)+x(5)*x(6)+x(3)*x(7)+x(3)*x(6)+x(2)*x(4)+x(1)*x(7)+x(1)*x(6)+x
 poly f_1;
 x(0)*x(2)+x(1)*x(2)+x(0)*x(3)+x(1)*x(3)+x(2)*x(4)+x(1)*x(5)+x(1)*x(6)+x(3)*x(6)+x(5)*x(6)+x(0)*x(7)+x(1)*x(7)+x(3)*x(7)+x(5)*x(7)+x(2)*y(0)+x(4)*y(0)+x(0)*y(2)+x(3)*y(2)+x(4)*y(2)+x(6)*y(2)+x(0)*y(3)+x(2)*y(3)+x(1)*y(4)+x(7)*y(4)+x(5)*y(5)+x(7)*y(5)+x(6)*y(6)+x(7)*y(6)+x(6)*y(7)+x(3)+x(5)+x(7)+y(0)+y(2)+y(7)+1
 ```
+The lead monomial is now the quadratic monomial in *x* with the lowest index sum followed by the quadratic monomial in *x* with the second lowest index sum. But here again we find this pattern broken by `x(5)*x(6)` with an indes sum of 11 being greater than `x(0)*x(7)` with an index sum of 7. As a high index means that the variable is low we can simply substitute a low variable index by a high high variable idex in the reasoning of the previous section to make it applcable for the **degree reverse lexicographical ordering with ascending indexes**.
 
-The demo of the impact of ascending and descending indexes was merely a little fun experiment. Now we will print *f_1* in various global monomial orderings:
+Demonstrating the impact of ascending and descending indexes was merely a little fun experiment. Now we will print *f_1* in various global monomial orderings:
 
 
 ### Lexicographical Ordering
@@ -79,7 +85,31 @@ poly f_1=x(5)*x(7)+x(5)*x(6)+x(3)*x(7)+x(3)*x(6)+x(2)*x(4)+x(1)*x(7)+x(1)*x(6)+x
 poly f_1;
 x(7)*x(5)+x(7)*x(3)+x(7)*x(1)+x(7)*x(0)+x(7)*y(6)+x(7)*y(5)+x(7)*y(4)+x(7)+x(6)*x(5)+x(6)*x(3)+x(6)*x(1)+x(6)*y(7)+x(6)*y(6)+x(6)*y(2)+x(5)*x(1)+x(5)*y(5)+x(5)+x(4)*x(2)+x(4)*y(2)+x(4)*y(0)+x(3)*x(1)+x(3)*x(0)+x(3)*y(2)+x(3)+x(2)*x(1)+x(2)*x(0)+x(2)*y(3)+x(2)*y(0)+x(1)*y(4)+x(0)*y(3)+x(0)*y(2)+y(7)+y(2)+y(0)+1
 ```
-**Note** that x(7) as a factor has the main impact on a monomial's rank in the lexicographical ordering. E. g., the fourth monomial is `x(0)*x(7)` which has a lower index sum of 7 than the index sum 13 of the fifth monomial `y(6)+x(7)`.
+The **lexicographical ordering** is defined from the left to the right: 
+
+1. The monomials are ordered by the highest variable factor: First we have all monomials with x(7) as a factor, then all monomials with x(6), then all monomials with x(5), etc.
+2. Within these groups of `x(7)* ...`, `x(6)* ...`, ..., `x(0)* ...`, ..., `1* ...`, the order of the monomials is determined by the order of the second factor. E. g., `x(7)* x(0)` > `x(7)* y(6)` and `x(2)* x(0)` > `x(2)* y(3)`.
+3. The degree of the monomials has no direct impact on the ordering E. g. `x(7)` > `x(6)*x(5)`.
+
+
+### Reverse Lexicographical Ordering
+
+Define the ring r4 with lexicographical ordering lp:
+```
+ring r4=complex,(x(7..0),y(7..0)),rp;
+```
+Define the polynomial *f_1* in the new ring r and print it:
+```
+poly f_1=x(5)*x(7)+x(5)*x(6)+x(3)*x(7)+x(3)*x(6)+x(2)*x(4)+x(1)*x(7)+x(1)*x(6)+x(1)*x(5)+x(1)*x(3)+x(1)*x(2)+x(0)*x(7)+x(0)*x(3)+x(0)*x(2)+x(6)*y(7)+x(7)*y(6)+x(6)*y(6)+x(7)*y(5)+x(5)*y(5)+x(7)*y(4)+x(1)*y(4)+x(2)*y(3)+x(0)*y(3)+x(6)*y(2)+x(4)*y(2)+x(3)*y(2)+x(0)*y(2)+x(4)*y(0)+x(2)*y(0)+x(7)+x(5)+x(3)+y(7)+y(2)+y(0)+1;
+poly f_1;
+x(2)*y(0)+x(4)*y(0)+y(0)+x(0)*y(2)+x(3)*y(2)+x(4)*y(2)+x(6)*y(2)+y(2)+x(0)*y(3)+x(2)*y(3)+x(1)*y(4)+x(7)*y(4)+x(5)*y(5)+x(7)*y(5)+x(6)*y(6)+x(7)*y(6)+x(6)*y(7)+y(7)+x(2)*x(0)+x(3)*x(0)+x(7)*x(0)+x(2)*x(1)+x(3)*x(1)+x(5)*x(1)+x(6)*x(1)+x(7)*x(1)+x(4)*x(2)+x(6)*x(3)+x(7)*x(3)+x(3)+x(6)*x(5)+x(7)*x(5)+x(5)+x(7)+1
+```
+The **reverse lexicographical ordering** is defined from the left to the right: 
+
+1. The monomials are ordered by the lowest variable factor: First we have all monomials with y(0) as a factor, then all monomials with y(1), then all monomials with y(2), etc.
+2. Within these groups of `y(0)* ...`, `y(1)* ...`, ..., `x(7)* ...`, ..., `1* ...`, the order of the monomials is determined by the order of the second factor. E. g., `x(2)* y(0)` > `x(4)* y(0)` and `x(2)* x(0)` > `x(3)* x(0)`.
+3. The degree of the monomials has no direct impact on the ordering E. g. `y(0)` > `x(0)*y(2)`.
+
 
 
 ## Macaulay matrix
