@@ -108,7 +108,7 @@ The **reverse lexicographical ordering** is defined from the left to the right:
 
 1. The monomials are ordered by the lowest variable factor: First we have all monomials with y(0) as a factor, then all monomials with y(1), then all monomials with y(2), etc.
 2. Within these groups of `y(0)* ...`, `y(1)* ...`, ..., `x(7)* ...`, ..., `1* ...`, the order of the monomials is determined by the order of the second factor. E. g., `x(2)* y(0)` > `x(4)* y(0)` and `x(2)* x(0)` > `x(3)* x(0)`.
-3. The degree of the monomials has no direct impact on the ordering E. g. `y(0)` > `x(0)*y(2)`.
+3. The monomials are not ordered according to their degree, e. g. `x(2)*y(0)` > `y(0)` > `x(0)*y(2)`. The degree of a monomial does only matter for the ordering in a group of monomials with the same variable as a factor, e. g. `y(0)` = `1*y(0)` is the smallest monomial in the group of monomials with factor `y(0)`: `x(2)*y(0)+x(4)*y(0)+y(0)`.
 
 
 
