@@ -5,7 +5,7 @@ We chose the [Computeralgebra System Singular](https://www.singular.uni-kl.de/) 
 
 ## Polynomials of the AES S-Box
 
-First we created a Singular compatible notation of the 39 Boolean quadratic polynomials for the AES S-Box can be found in the 8 Appendix of original paper: [Boolean quadratic polynomials of the AES S-Box for Singular](AES_polys_Chen_Gao_vars)
+We created a Singular compatible notation of the 39 Boolean quadratic polynomials for the AES S-Box which are in the appendix of the original paper: [Boolean quadratic polynomials of the AES S-Box for Singular](AES_polys_Chen_Gao_vars)
 
 
 
