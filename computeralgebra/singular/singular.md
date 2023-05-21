@@ -13,7 +13,7 @@ We created a Singular compatible notation of the 39 Boolean quadratic polynomial
 
 The purpose of a monomial ordering is to have a well defined structure for each pair of monomials w.r.t. the relation "greater than". With many variables in a polynomial ring, this structure is not naturally achieved. E. g. in *R(x,y)*, how can we decide if *x²y² > x³y* or the other way around? Monomial orderings are essential in Computeralgebra for any computation. 
 
-We are handling quite [long quadratic polynomials]((AES_polys_Chen_Gao_vars)) here. You can find a purely abstract definition of monomial orderings on [B.2.3 Global orderings](https://www.singular.uni-kl.de/Manual/4-3-2/sing_978.htm#SEC1035). We want to make the impact to the related computations touchable by printing the first polynomial *f_1* in a few chosen monomial orderings.
+We are handling quite [long quadratic polynomials]((AES_polys_Chen_Gao_vars)) here. You can find a purely abstract definition of monomial orderings on [B.2.3 Global orderings](https://www.singular.uni-kl.de/Manual/4-3-2/sing_978.htm#SEC1035). We want to make the impact of a monomial ordering on polynomial computations touchable by printing the first polynomial *f_1* in a few chosen monomial orderings.
 
 
 ### Degree Reverse Lexicographical Ordering with Descending Indexes
