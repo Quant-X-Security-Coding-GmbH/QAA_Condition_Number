@@ -22,7 +22,7 @@ Check out [notation.md](https://github.com/Quant-X-Security-Coding-GmbH/QAA_Cond
 
 * The **QAA** is based on 
 	* The HHL algorithm (Quantum Linear Algebra) 
-	* Computeralgebra means in order to solve Boolean Multivariate Equation Systems (BMQ).
+	* Computeralgebra means in order to solve Boolean Multivariate Quadratic Equation Systems (BMQ).
 * To calculate the condition number of the cryptosystems (their security levels respectively), we have to work with Computeralgebra and numerical methods.
 
 
